@@ -1,0 +1,433 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    /* --- VARIABLES (Bhakt Seva Theme) --- */
+    :root {
+        --bs-dark: #0d1b2a;
+        /* Dark Navy Background */
+        --bs-surface: #1a2a3a;
+        /* Dark Slate Blue for Cards/Icons */
+        --bs-primary: #e85d04;
+        /* Burnt Orange Accent */
+        --bs-secondary: #f48c06;
+        /* Deep Saffron */
+        --bs-text-main: #ffffff;
+        /* Pure White */
+        --bs-text-muted: #b0c4de;
+        /* Muted Blue/Grey */
+        --bs-border: rgba(255, 255, 255, 0.1);
+        /* Subtle Divider */
+    }
+
+    /* =========================================
+       MOBILE BOTTOM NAVIGATION (BHAKT SEVA)
+       ========================================= */
+    .bs-mobile-nav {
+        display: none;
+        /* Hidden on Desktop */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--bs-dark);
+        box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.5);
+        z-index: 99998;
+        padding: 6px 10px 10px;
+        border-top: 1px solid var(--bs-border);
+        border-radius: 20px 20px 0 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .bs-mobile-nav * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bs-mob-nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .bs-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        color: var(--bs-text-muted);
+        font-size: 10px;
+        font-weight: 500;
+        padding: 8px 4px;
+        border-radius: 12px;
+        transition: 0.3s;
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        letter-spacing: 0.3px;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    #bsMenuTrigger {
+        width: 100%;
+        color: var(--bs-text-muted);
+    }
+
+    .bs-nav-item:hover,
+    .bs-nav-item.active {
+        color: var(--bs-primary);
+    }
+
+    .bs-nav-icon {
+        width: 22px;
+        height: 22px;
+        fill: currentColor;
+        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .bs-nav-item:hover .bs-nav-icon,
+    .bs-nav-item.active .bs-nav-icon {
+        transform: translateY(-3px) scale(1.1);
+        fill: var(--bs-primary);
+    }
+
+    /* Center Call Highlight */
+    .bs-nav-item.bs-highlight {
+        position: relative;
+        top: -20px;
+        background: linear-gradient(135deg, var(--bs-primary), var(--bs-secondary)) !important;
+        color: var(--bs-text-main) !important;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-shadow: 0 6px 18px rgba(232, 93, 4, 0.4);
+        border: 4px solid var(--bs-dark);
+        padding: 0;
+        margin-bottom: -15px;
+        flex: none;
+        transition: 0.3s;
+    }
+
+    .bs-nav-item.bs-highlight:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(232, 93, 4, 0.6);
+    }
+
+    .bs-nav-item.bs-highlight .bs-nav-icon {
+        width: 24px !important;
+        height: 24px !important;
+        fill: var(--bs-text-main) !important;
+        transform: none !important;
+    }
+
+    /* =========================================
+       BOTTOM SHEET DRAWER (MENU)
+       ========================================= */
+    .bs-bottom-sheet-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(5px);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 99999;
+        transition: all 0.3s ease;
+    }
+
+    .bs-bottom-sheet-overlay.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .bs-bottom-sheet {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background: var(--bs-dark);
+        border-radius: 24px 24px 0 0;
+        border-top: 2px solid var(--bs-primary);
+        z-index: 100000;
+        padding: 24px 20px 40px;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6);
+        transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1);
+        max-height: 85vh;
+        overflow-y: auto;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .bs-bottom-sheet.open {
+        bottom: 0;
+    }
+
+    .bs-bottom-sheet * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bs-bottom-sheet a {
+        text-decoration: none;
+    }
+
+    /* Sheet Header */
+    .bs-bs-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--bs-border);
+        padding-bottom: 15px;
+    }
+
+    .bs-bs-header h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--bs-text-main);
+        margin: 0;
+        letter-spacing: 0.5px;
+    }
+
+    .bs-bs-close {
+        width: 32px;
+        height: 32px;
+        background: var(--bs-surface);
+        color: var(--bs-text-main);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--bs-border);
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .bs-bs-close:hover {
+        background: var(--bs-primary);
+        border-color: var(--bs-primary);
+    }
+
+    /* Sheet Grid */
+    .bs-bs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+        gap: 20px 10px;
+    }
+
+    .bs-bs-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+    }
+
+    .bs-bs-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background: var(--bs-surface);
+        border: 1px solid var(--bs-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        color: var(--bs-text-main);
+    }
+
+    .bs-bs-item:hover .bs-bs-icon {
+        transform: translateY(-4px);
+        background: rgba(232, 93, 4, 0.15);
+        border-color: var(--bs-primary);
+        box-shadow: 0 8px 15px rgba(232, 93, 4, 0.2);
+    }
+
+    .bs-bs-text {
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--bs-text-muted);
+        text-align: center;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        transition: color 0.3s;
+    }
+
+    .bs-bs-item:hover .bs-bs-text {
+        color: var(--bs-primary);
+    }
+
+    /* Responsive Display Trigger */
+    @media (max-width: 900px) {
+        .bs-mobile-nav {
+            display: block;
+        }
+    }
+</style>
+
+<div class="bs-mobile-nav">
+    <div class="bs-mob-nav-inner">
+
+        <a href="https://bhaktseva.in/" class="bs-nav-item active">
+            <svg class="bs-nav-icon" viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+            <span>Home</span>
+        </a>
+
+        <a href="https://bhaktseva.in/destination/" class="bs-nav-item">
+            <svg class="bs-nav-icon" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+            <span>Places</span>
+        </a>
+
+        <a href="tel:+919921626458" class="bs-nav-item bs-highlight" aria-label="Call Now">
+            <svg class="bs-nav-icon" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+        </a>
+
+        <a href="https://bhaktseva.in/package/" class="bs-nav-item">
+            <svg class="bs-nav-icon" viewBox="0 0 24 24">
+                <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
+            </svg>
+            <span>Packages</span>
+        </a>
+
+        <button type="button" class="bs-nav-item" id="bsMenuTrigger" aria-label="Open menu" style="background:none;border:none;font-family:inherit">
+            <svg class="bs-nav-icon" viewBox="0 0 24 24">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            </svg>
+            <span>Menu</span>
+        </button>
+
+    </div>
+</div>
+
+<div class="bs-bottom-sheet-overlay" id="bsBsOverlay"></div>
+
+<div class="bs-bottom-sheet" id="bsBottomSheet">
+    <div class="bs-bs-header">
+        <h3>BhaktSeva Menu</h3>
+        <button class="bs-bs-close" id="bsBsClose">✕</button>
+    </div>
+
+    <div class="bs-bs-grid">
+        <a href="https://bhaktseva.in/" class="bs-bs-item">
+            <div class="bs-bs-icon">🏠</div>
+            <span class="bs-bs-text">Home</span>
+        </a>
+        <a href="https://bhaktseva.in/about/" class="bs-bs-item">
+            <div class="bs-bs-icon">ℹ️</div>
+            <span class="bs-bs-text">About Us</span>
+        </a>
+        <a href="https://bhaktseva.in/destination/" class="bs-bs-item">
+            <div class="bs-bs-icon">🛕</div>
+            <span class="bs-bs-text">Destinations</span>
+        </a>
+        <a href="https://bhaktseva.in/package/" class="bs-bs-item">
+            <div class="bs-bs-icon">🧳</div>
+            <span class="bs-bs-text">Tour Packages</span>
+        </a>
+
+        <!-- FOOD – new separate item -->
+        <a href="https://bhaktseva.in/food-and-restaurant/" class="bs-bs-item">
+            <div class="bs-bs-icon">🍽️</div>
+            <span class="bs-bs-text">Food</span>
+        </a>
+
+        <!-- HOTEL – new separate item -->
+        <a href="https://bhaktseva.in/hotels-and-food/" class="bs-bs-item">
+            <div class="bs-bs-icon">🏨</div>
+            <span class="bs-bs-text">accommodation</span>
+        </a>
+
+        <a href="https://bhaktseva.in/local-guide/" class="bs-bs-item">
+            <div class="bs-bs-icon">🧭</div>
+            <span class="bs-bs-text">Local Guides</span>
+        </a>
+        <a href="https://bhaktseva.in/contact/" class="bs-bs-item">
+            <div class="bs-bs-icon">📞</div>
+            <span class="bs-bs-text">Contact Us</span>
+        </a>
+        <a href="https://wa.me/919921626458" class="bs-bs-item" target="_blank" rel="noopener noreferrer">
+            <div class="bs-bs-icon">💬</div>
+            <span class="bs-bs-text">WhatsApp</span>
+        </a>
+        <a href="https://bhaktseva.in/management/admin/login.php" class="bs-bs-item" target="_blank" rel="noopener noreferrer">
+            <div class="bs-bs-icon">🔐</div>
+            <span class="bs-bs-text">Admin Login</span>
+        </a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const trigger = document.getElementById('bsMenuTrigger');
+        const overlay = document.getElementById('bsBsOverlay');
+        const sheet = document.getElementById('bsBottomSheet');
+        const closeBtn = document.getElementById('bsBsClose');
+
+        // Function to open/close the bottom sheet
+        function toggleBottomSheet(e) {
+            if (e) e.preventDefault();
+
+            const isOpen = sheet.classList.contains('open');
+            if (isOpen) {
+                sheet.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = ''; // Restore scrolling
+            } else {
+                sheet.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        if (trigger) trigger.addEventListener('click', toggleBottomSheet);
+        if (closeBtn) closeBtn.addEventListener('click', toggleBottomSheet);
+        if (overlay) overlay.addEventListener('click', toggleBottomSheet);
+
+        // Close bottom sheet when navigating (not for same-page menu button)
+        const sheetLinks = sheet.querySelectorAll('.bs-bs-item');
+        sheetLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (sheet.classList.contains('open')) {
+                    sheet.classList.remove('open');
+                    overlay.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Highlight active bottom nav from current path
+        var path = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+        document.querySelectorAll('.bs-mob-nav-inner > a.bs-nav-item').forEach(function(el) {
+            try {
+                var linkPath = new URL(el.href).pathname.replace(/\/$/, '') || '/';
+                if (linkPath === path) {
+                    document.querySelectorAll('.bs-mob-nav-inner .bs-nav-item').forEach(function(n) {
+                        n.classList.remove('active');
+                    });
+                    el.classList.add('active');
+                }
+            } catch (err) { /* ignore */ }
+        });
+    });
+</script>

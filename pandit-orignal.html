@@ -1,0 +1,4779 @@
+<!-- ============================================================
+     BHAKT SEVA — PANDIT JI
+     PREMIUM 4 SECTION DESIGN
+     Orange + Gold + White + Soft Pink
+     Elementor HTML Widget
+============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* ============================================================
+   ROOT
+============================================================ */
+
+#bs-pandit-4{
+
+  --orange:#f47b20;
+  --orange2:#ff9f43;
+  --orange3:#ffd0a3;
+
+  --gold:#d6a43b;
+  --gold2:#f8d77d;
+  --gold3:#fff0b8;
+
+  --pink:#f8c8d8;
+  --pink2:#fde7ee;
+  --pink3:#fff4f7;
+
+  --cream:#fffaf2;
+  --cream2:#fff1df;
+
+  --white:#ffffff;
+
+  --brown:#604735;
+  --dark:#332116;
+
+  --green:#23815c;
+
+  font-family:'Poppins',sans-serif;
+  color:var(--dark);
+  background:var(--cream);
+
+  overflow:hidden;
+  width:100%;
+  position:relative;
+}
+
+#bs-pandit-4 *,
+#bs-pandit-4 *:before,
+#bs-pandit-4 *:after{
+  box-sizing:border-box;
+}
+
+#bs-pandit-4 a{
+  text-decoration:none;
+}
+
+.bs4-container{
+  width:min(1180px,calc(100% - 36px));
+  margin:auto;
+}
+
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes bs4Float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-15px);
+  }
+}
+
+@keyframes bs4Float2{
+  0%,100%{
+    transform:translate(0,0);
+  }
+  50%{
+    transform:translate(12px,-18px);
+  }
+}
+
+@keyframes bs4Rotate{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes bs4Pulse{
+  0%,100%{
+    transform:scale(1);
+    opacity:.75;
+  }
+  50%{
+    transform:scale(1.12);
+    opacity:1;
+  }
+}
+
+@keyframes bs4Glow{
+  0%,100%{
+    box-shadow:0 0 15px rgba(244,123,32,.20);
+  }
+  50%{
+    box-shadow:0 0 40px rgba(244,123,32,.45);
+  }
+}
+
+@keyframes bs4Shine{
+  0%{
+    left:-100%;
+  }
+  100%{
+    left:130%;
+  }
+}
+
+@keyframes bs4Reveal{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* ============================================================
+   SECTION 1 — HERO
+============================================================ */
+
+.bs4-hero{
+
+  min-height:680px;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(241, 147, 5, 0.911),
+      transparent 20%
+    ),
+
+    radial-gradient(
+      circle at 88% 25%,
+      rgba(233, 114, 3, 0.945),
+      transparent 23%
+    ),
+
+    radial-gradient(
+      circle at 75% 90%,
+      rgba(255,175,108,.30),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fffaf2 0%,
+      #fff1df 35%,
+      #fde5ec 67%,
+      #ffe2c0 100%
+    );
+}
+
+
+/* decorative circles */
+
+.bs4-hero:before{
+  content:"";
+  position:absolute;
+
+  width:520px;
+  height:520px;
+
+  right:-170px;
+  top:-170px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(214,164,59,.25);
+
+  box-shadow:
+    0 0 0 55px rgba(214,164,59,.055),
+    0 0 0 110px rgba(244,123,32,.035);
+
+  animation:bs4Rotate 35s linear infinite;
+}
+
+
+.bs4-hero:after{
+  content:"";
+
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  left:-150px;
+  bottom:-170px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(244,123,32,.17),
+      transparent 68%
+    );
+
+  animation:bs4Pulse 5s ease-in-out infinite;
+}
+
+
+/* floating particles */
+
+.bs4-particle{
+  position:absolute;
+  color:var(--gold);
+  opacity:.6;
+  z-index:1;
+  animation:bs4Float2 5s ease-in-out infinite;
+}
+
+.bs4-p1{
+  left:8%;
+  top:20%;
+  font-size:24px;
+}
+
+.bs4-p2{
+  left:15%;
+  bottom:18%;
+  font-size:18px;
+  animation-delay:1s;
+}
+
+.bs4-p3{
+  right:18%;
+  top:18%;
+  font-size:28px;
+  animation-delay:2s;
+}
+
+.bs4-p4{
+  right:9%;
+  bottom:20%;
+  font-size:20px;
+  animation-delay:1.5s;
+}
+
+
+/* hero layout */
+
+.bs4-hero-grid{
+
+  position:relative;
+  z-index:3;
+
+  display:grid;
+
+  grid-template-columns:1.05fr .95fr;
+
+  gap:55px;
+
+  align-items:center;
+
+  padding:80px 0;
+}
+
+
+/* hero text */
+
+.bs4-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 16px;
+
+  border-radius:50px;
+
+  background:rgba(255,255,255,.72);
+
+  border:1px solid rgba(214,164,59,.35);
+
+  box-shadow:0 7px 20px rgba(80,40,10,.07);
+
+  color:#a56b0c;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  backdrop-filter:blur(8px);
+}
+
+.bs4-badge i{
+
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:var(--orange);
+
+  box-shadow:0 0 12px var(--orange);
+
+  animation:bs4Pulse 1.7s infinite;
+}
+
+
+.bs4-hero h1{
+
+  margin:22px 0 12px;
+
+  font-family:'Noto Sans Devanagari',
+              'Cormorant Garamond',
+              serif;
+
+  font-size:clamp(40px,5.3vw,68px);
+
+  line-height:1.12;
+
+  color:#50331f;
+
+  font-weight:800;
+}
+
+.bs4-hero h1 span{
+
+  display:block;
+
+  color:var(--orange);
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:.78em;
+
+  font-style:italic;
+}
+
+
+.bs4-hero-desc{
+
+  max-width:650px;
+
+  color:#755f4d;
+
+  font-size:16px;
+
+  line-height:1.85;
+
+  margin:18px 0 28px;
+}
+
+
+/* buttons */
+
+.bs4-buttons{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+}
+
+
+.bs4-btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+
+  min-height:50px;
+
+  padding:13px 25px;
+
+  border-radius:50px;
+
+  font-size:13px;
+
+  font-weight:800;
+
+  transition:.3s ease;
+
+  cursor:pointer;
+}
+
+
+.bs4-btn-orange{
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f47b20,
+      #ffad5c
+    );
+
+  box-shadow:
+    0 12px 30px rgba(244,123,32,.30);
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.bs4-btn-orange:before{
+
+  content:"";
+
+  position:absolute;
+
+  width:60px;
+
+  height:150%;
+
+  background:rgba(255,255,255,.25);
+
+  transform:rotate(25deg);
+
+  top:-20%;
+
+  left:-100%;
+
+  animation:bs4Shine 4s infinite;
+}
+
+.bs4-btn-orange:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 18px 40px rgba(244,123,32,.40);
+
+  color:#fff;
+}
+
+
+.bs4-btn-white{
+
+  color:#a85b19;
+
+  background:#fff;
+
+  border:1px solid #f0d7b9;
+
+  box-shadow:0 7px 20px rgba(80,40,10,.06);
+}
+
+.bs4-btn-white:hover{
+
+  transform:translateY(-4px);
+
+  border-color:var(--orange);
+
+  color:var(--orange);
+}
+
+
+/* hero visual */
+
+.bs4-hero-art{
+
+  min-height:450px;
+
+  position:relative;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+}
+
+
+.bs4-art-ring{
+
+  position:absolute;
+
+  width:410px;
+  height:410px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(214,164,59,.32);
+
+  animation:bs4Rotate 28s linear infinite;
+}
+
+.bs4-art-ring:before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:38px;
+
+  border-radius:50%;
+
+  border:1px dashed rgba(244,123,32,.28);
+}
+
+.bs4-art-ring:after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:78px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(248,200,216,.6);
+}
+
+
+.bs4-art-card{
+
+  width:300px;
+  min-height:360px;
+
+  position:relative;
+
+  z-index:3;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:30px;
+
+  border-radius:35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.92),
+      rgba(255,244,247,.88)
+    );
+
+  border:1px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 25px 60px rgba(128,70,35,.16);
+
+  backdrop-filter:blur(12px);
+
+  animation:bs4Float 5s ease-in-out infinite;
+}
+
+
+/* diya */
+
+.bs4-diya{
+
+  position:relative;
+
+  width:140px;
+  height:150px;
+
+  margin-bottom:15px;
+}
+
+
+.bs4-flame{
+
+  position:absolute;
+
+  left:50%;
+  top:5px;
+
+  width:48px;
+  height:83px;
+
+  transform:translateX(-50%);
+
+  border-radius:
+    55% 45% 55% 45%;
+
+  background:
+    linear-gradient(
+      #fff8be,
+      #ffc145 45%,
+      #f47b20
+    );
+
+  filter:
+    drop-shadow(
+      0 0 22px
+      rgba(255,180,40,.85)
+    );
+
+  animation:bs4Pulse 1.7s infinite;
+}
+
+
+.bs4-flame:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:20px;
+  height:40px;
+
+  left:14px;
+  top:20px;
+
+  border-radius:50%;
+
+  background:#fff;
+}
+
+
+.bs4-bowl{
+
+  position:absolute;
+
+  left:50%;
+  bottom:18px;
+
+  transform:translateX(-50%);
+
+  width:135px;
+  height:52px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      #ffae61,
+      #d75f15
+    );
+
+  box-shadow:
+    0 14px 25px rgba(100,45,10,.20);
+}
+
+.bs4-bowl:before{
+
+  content:"";
+
+  position:absolute;
+
+  left:15px;
+  right:15px;
+  top:8px;
+
+  height:15px;
+
+  border-radius:50%;
+
+  background:#8e4014;
+}
+
+
+.bs4-art-card h3{
+
+  margin:5px 0 6px;
+
+  font-family:'Noto Sans Devanagari',sans-serif;
+
+  color:#543621;
+
+  font-size:21px;
+}
+
+
+.bs4-art-card p{
+
+  margin:0;
+
+  color:#8b7461;
+
+  font-size:12px;
+
+  line-height:1.7;
+}
+
+
+/* ============================================================
+   SECTION 2 — PUJA SERVICES
+============================================================ */
+
+.bs4-services{
+
+  padding:90px 0;
+
+  position:relative;
+
+  background:
+
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(244,123,32,.10),
+      transparent 20%
+    ),
+
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(248,200,216,.22),
+      transparent 24%
+    ),
+
+    linear-gradient(
+      180deg,
+      #fffdf9,
+      #fff8ef
+    );
+}
+
+
+.bs4-heading{
+
+  text-align:center;
+
+  max-width:700px;
+
+  margin:0 auto 45px;
+}
+
+
+.bs4-heading small{
+
+  color:var(--orange);
+
+  font-size:11px;
+
+  font-weight:800;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+
+.bs4-heading h2{
+
+  margin:8px 0 10px;
+
+  color:#543621;
+
+  font-family:'Noto Sans Devanagari',
+              'Cormorant Garamond',
+              serif;
+
+  font-size:clamp(30px,4vw,46px);
+
+  line-height:1.2;
+}
+
+
+.bs4-heading h2 span{
+
+  color:var(--orange);
+}
+
+
+.bs4-heading p{
+
+  margin:0;
+
+  color:#806d5c;
+
+  font-size:14px;
+
+  line-height:1.8;
+}
+
+
+/* services */
+
+.bs4-service-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:18px;
+}
+
+
+.bs4-service{
+
+  position:relative;
+
+  padding:25px 20px;
+
+  border-radius:24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #fff8f3
+    );
+
+  border:1px solid #f0dfcf;
+
+  box-shadow:
+    0 10px 30px rgba(100,50,20,.06);
+
+  overflow:hidden;
+
+  transition:.35s ease;
+}
+
+
+.bs4-service:before{
+
+  content:"";
+
+  position:absolute;
+
+  width:100px;
+  height:100px;
+
+  right:-40px;
+  top:-40px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(248,200,216,.55),
+      transparent 68%
+    );
+}
+
+
+.bs4-service:hover{
+
+  transform:translateY(-8px);
+
+  border-color:
+    rgba(244,123,32,.35);
+
+  box-shadow:
+    0 20px 45px rgba(100,50,20,.12);
+}
+
+
+.bs4-service-icon{
+
+  width:58px;
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0d7,
+      #ffe2eb
+    );
+
+  font-size:29px;
+
+  margin-bottom:17px;
+
+  animation:bs4Float 4s ease-in-out infinite;
+}
+
+
+.bs4-service:nth-child(2)
+.bs4-service-icon{
+  animation-delay:.4s;
+}
+
+.bs4-service:nth-child(3)
+.bs4-service-icon{
+  animation-delay:.8s;
+}
+
+
+.bs4-service h3{
+
+  position:relative;
+
+  margin:0 0 7px;
+
+  color:#4e3625;
+
+  font-family:'Noto Sans Devanagari',sans-serif;
+
+  font-size:16px;
+}
+
+
+.bs4-service p{
+
+  position:relative;
+
+  margin:0 0 13px;
+
+  color:#867260;
+
+  font-size:11px;
+
+  line-height:1.7;
+}
+
+
+.bs4-service a{
+
+  position:relative;
+
+  color:var(--orange);
+
+  font-size:11px;
+
+  font-weight:800;
+}
+
+
+/* ============================================================
+   SECTION 3 — WHY + HOW
+============================================================ */
+
+.bs4-why{
+
+  padding:90px 0;
+
+  position:relative;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255,193,69,.30),
+      transparent 20%
+    ),
+
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(248,200,216,.40),
+      transparent 23%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fff0df,
+      #fde9ef 55%,
+      #fffaf2
+    );
+}
+
+
+.bs4-why-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:45px;
+
+  align-items:center;
+}
+
+
+.bs4-why-title{
+
+  font-family:
+    'Noto Sans Devanagari',
+    sans-serif;
+
+  color:#543621;
+
+  font-size:35px;
+
+  line-height:1.3;
+
+  margin:0 0 14px;
+}
+
+
+.bs4-why-title span{
+
+  color:var(--orange);
+}
+
+
+.bs4-why-text{
+
+  color:#796553;
+
+  font-size:13px;
+
+  line-height:1.8;
+
+  margin-bottom:25px;
+}
+
+
+.bs4-benefits{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+}
+
+
+.bs4-benefit{
+
+  padding:17px;
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:11px;
+
+  background:
+    rgba(255,255,255,.78);
+
+  border:
+    1px solid rgba(214,164,59,.18);
+
+  border-radius:17px;
+
+  box-shadow:
+    0 7px 22px rgba(100,50,20,.05);
+
+  transition:.3s;
+}
+
+
+.bs4-benefit:hover{
+
+  transform:translateY(-4px);
+
+  background:#fff;
+}
+
+
+.bs4-benefit-icon{
+
+  width:35px;
+  height:35px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0d0,
+      #ffe0e9
+    );
+
+  color:var(--orange);
+
+  font-size:17px;
+}
+
+
+.bs4-benefit strong{
+
+  display:block;
+
+  color:#543621;
+
+  font-size:12px;
+
+  margin-bottom:3px;
+}
+
+
+.bs4-benefit span{
+
+  color:#907b67;
+
+  font-size:10px;
+
+  line-height:1.5;
+}
+
+
+/* how card */
+
+.bs4-how-card{
+
+  padding:35px;
+
+  border-radius:30px;
+
+  background:
+    rgba(255,255,255,.75);
+
+  border:
+    1px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 20px 50px rgba(100,50,20,.10);
+
+  backdrop-filter:blur(10px);
+}
+
+
+.bs4-how-card h3{
+
+  color:#543621;
+
+  font-family:'Noto Sans Devanagari',sans-serif;
+
+  font-size:24px;
+
+  margin:0 0 25px;
+}
+
+
+.bs4-step{
+
+  display:flex;
+
+  gap:15px;
+
+  position:relative;
+
+  padding-bottom:22px;
+}
+
+
+.bs4-step:last-child{
+  padding-bottom:0;
+}
+
+
+.bs4-step:not(:last-child):after{
+
+  content:"";
+
+  position:absolute;
+
+  left:20px;
+  top:42px;
+  bottom:0;
+
+  border-left:2px dashed #e9bf7a;
+}
+
+
+.bs4-step-num{
+
+  position:relative;
+
+  z-index:2;
+
+  width:42px;
+  height:42px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f47b20,
+      #ffb45d
+    );
+
+  color:#fff;
+
+  font-weight:800;
+
+  box-shadow:
+    0 7px 18px rgba(244,123,32,.25);
+}
+
+
+.bs4-step h4{
+
+  margin:2px 0 4px;
+
+  color:#543621;
+
+  font-size:13px;
+}
+
+
+.bs4-step p{
+
+  margin:0;
+
+  color:#897461;
+
+  font-size:10px;
+
+  line-height:1.6;
+}
+
+
+/* ============================================================
+   SECTION 4 — CONTACT + BOOKING
+============================================================ */
+
+.bs4-contact{
+
+  padding:95px 0;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(255,255,255,.50),
+      transparent 20%
+    ),
+
+    radial-gradient(
+      circle at 88% 85%,
+      rgba(255,220,126,.42),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f47b20 0%,
+      #ff984a 35%,
+      #f7bfd1 72%,
+      #fff0d7 100%
+    );
+}
+
+
+/* background mandala */
+
+.bs4-contact:before{
+
+  content:"ॐ";
+
+  position:absolute;
+
+  right:-100px;
+  top:-100px;
+
+  font-family:serif;
+
+  font-size:500px;
+
+  line-height:1;
+
+  color:rgba(255,255,255,.10);
+
+  animation:bs4Rotate 40s linear infinite;
+}
+
+
+.bs4-contact:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:400px;
+  height:400px;
+
+  left:-180px;
+  bottom:-220px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,.22);
+
+  box-shadow:
+    0 0 0 50px rgba(255,255,255,.07),
+    0 0 0 100px rgba(255,255,255,.04);
+}
+
+
+/* contact heading */
+
+.bs4-contact-heading{
+
+  position:relative;
+
+  z-index:3;
+
+  text-align:center;
+
+  max-width:720px;
+
+  margin:0 auto 45px;
+}
+
+
+.bs4-contact-heading small{
+
+  color:#fff8df;
+
+  font-size:11px;
+
+  letter-spacing:2px;
+
+  font-weight:800;
+}
+
+
+.bs4-contact-heading h2{
+
+  color:#fff;
+
+  font-family:
+    'Noto Sans Devanagari',
+    sans-serif;
+
+  font-size:clamp(32px,4vw,48px);
+
+  line-height:1.25;
+
+  margin:9px 0 10px;
+}
+
+
+.bs4-contact-heading h2 span{
+
+  color:#fff0a9;
+}
+
+
+.bs4-contact-heading p{
+
+  color:rgba(255,255,255,.85);
+
+  font-size:13px;
+
+  line-height:1.8;
+
+  margin:0;
+}
+
+
+/* contact grid */
+
+.bs4-contact-grid{
+
+  position:relative;
+
+  z-index:3;
+
+  display:grid;
+
+  grid-template-columns:
+    .72fr 1.28fr;
+
+  gap:25px;
+
+  align-items:stretch;
+}
+
+
+/* left contact */
+
+.bs4-contact-info{
+
+  padding:32px;
+
+  border-radius:30px;
+
+  background:
+    rgba(255,255,255,.16);
+
+  border:
+    1px solid rgba(255,255,255,.35);
+
+  box-shadow:
+    0 20px 50px rgba(120,50,20,.15);
+
+  backdrop-filter:blur(14px);
+
+  color:#fff;
+}
+
+
+.bs4-contact-info h3{
+
+  font-family:
+    'Noto Sans Devanagari',
+    sans-serif;
+
+  font-size:25px;
+
+  margin:0 0 10px;
+}
+
+
+.bs4-contact-info>p{
+
+  color:rgba(255,255,255,.78);
+
+  font-size:12px;
+
+  line-height:1.8;
+
+  margin:0 0 25px;
+}
+
+
+.bs4-contact-item{
+
+  display:flex;
+
+  gap:13px;
+
+  align-items:center;
+
+  padding:14px;
+
+  margin-bottom:10px;
+
+  border-radius:16px;
+
+  background:
+    rgba(255,255,255,.12);
+
+  border:
+    1px solid rgba(255,255,255,.15);
+
+  transition:.3s;
+}
+
+
+.bs4-contact-item:hover{
+
+  transform:translateX(5px);
+
+  background:
+    rgba(255,255,255,.20);
+}
+
+
+.bs4-contact-icon{
+
+  width:42px;
+  height:42px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:13px;
+
+  background:#fff;
+
+  color:var(--orange);
+
+  font-size:19px;
+
+  box-shadow:
+    0 7px 18px rgba(80,40,10,.10);
+}
+
+
+.bs4-contact-item strong{
+
+  display:block;
+
+  font-size:12px;
+
+  margin-bottom:2px;
+}
+
+
+.bs4-contact-item span{
+
+  color:rgba(255,255,255,.70);
+
+  font-size:10px;
+}
+
+
+/* contact buttons */
+
+.bs4-contact-buttons{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:10px;
+
+  margin-top:18px;
+}
+
+
+.bs4-contact-btn{
+
+  min-height:46px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:7px;
+
+  border-radius:14px;
+
+  background:#fff;
+
+  color:#b95c16;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  transition:.3s;
+}
+
+
+.bs4-contact-btn:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(80,40,10,.15);
+
+  color:var(--orange);
+}
+
+
+/* booking form */
+
+.bs4-book-card{
+
+  padding:30px;
+
+  border-radius:30px;
+
+  background:
+    rgba(255,255,255,.96);
+
+  border:
+    1px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 25px 65px rgba(90,40,15,.18);
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+
+.bs4-book-card:before{
+
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  right:-80px;
+  top:-80px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(248,200,216,.6),
+      transparent 70%
+    );
+}
+
+
+.bs4-book-card-head{
+
+  position:relative;
+
+  margin-bottom:22px;
+}
+
+
+.bs4-book-card-head h3{
+
+  margin:0 0 4px;
+
+  color:#543621;
+
+  font-family:
+    'Cormorant Garamond',
+    serif;
+
+  font-size:31px;
+}
+
+
+.bs4-book-card-head p{
+
+  margin:0;
+
+  color:#927c68;
+
+  font-size:11px;
+}
+
+
+/* ============================================================
+   ORGSCALE FORM
+============================================================ */
+
+#bs4-orgscale-form{
+
+  position:relative;
+
+  z-index:2;
+
+  font-family:'Poppins',sans-serif;
+
+  max-width:650px;
+
+  margin:auto;
+}
+
+
+#bs4-orgscale-form .osf-form{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:15px;
+}
+
+
+#bs4-orgscale-form .osf-group{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:6px;
+}
+
+
+#bs4-orgscale-form .osf-label{
+
+  color:#654735;
+
+  font-size:12px;
+
+  font-weight:700;
+}
+
+
+#bs4-orgscale-form .osf-req{
+
+  color:var(--orange);
+
+  margin-left:3px;
+}
+
+
+#bs4-orgscale-form .osf-help{
+
+  color:#a18d7b;
+
+  font-size:10px;
+}
+
+
+#bs4-orgscale-form .osf-input{
+
+  width:100%;
+
+  padding:12px 13px;
+
+  border:
+    1.5px solid #eaded0;
+
+  border-radius:12px;
+
+  background:#fffdf9;
+
+  color:#3f2d20;
+
+  font-family:inherit;
+
+  font-size:12px;
+
+  outline:none;
+
+  transition:.25s;
+}
+
+
+#bs4-orgscale-form .osf-input:focus{
+
+  border-color:var(--orange);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(244,123,32,.10);
+}
+
+
+#bs4-orgscale-form textarea.osf-input{
+
+  min-height:95px;
+
+  resize:vertical;
+}
+
+
+#bs4-orgscale-form select.osf-input{
+
+  cursor:pointer;
+}
+
+
+#bs4-orgscale-form .osf-radio-group,
+#bs4-orgscale-form .osf-check-group{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:8px;
+}
+
+
+#bs4-orgscale-form .osf-radio-opt,
+#bs4-orgscale-form .osf-check-opt{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  color:#6c5746;
+
+  font-size:11px;
+
+  cursor:pointer;
+}
+
+
+#bs4-orgscale-form .osf-name-wrap{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:9px;
+}
+
+
+#bs4-orgscale-form .osf-addr-wrap{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:8px;
+}
+
+
+#bs4-orgscale-form .osf-btn{
+
+  width:100%;
+
+  min-height:49px;
+
+  border:0;
+
+  border-radius:13px;
+
+  cursor:pointer;
+
+  font-family:inherit;
+
+  font-size:13px;
+
+  font-weight:800;
+}
+
+
+#bs4-orgscale-form .osf-btn-submit{
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f47b20,
+      #ffac5b
+    );
+
+  box-shadow:
+    0 12px 28px
+    rgba(244,123,32,.30);
+
+  transition:.3s;
+}
+
+
+#bs4-orgscale-form .osf-btn-submit:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 16px 34px
+    rgba(244,123,32,.38);
+}
+
+
+#bs4-orgscale-form .osf-btn-submit:disabled{
+
+  opacity:.6;
+
+  cursor:not-allowed;
+}
+
+
+#bs4-orgscale-form .osf-success{
+
+  padding:25px;
+
+  text-align:center;
+
+  border-radius:18px;
+
+  background:#effaf4;
+
+  border:1px solid #a8e6c2;
+
+  color:#167b51;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  line-height:1.7;
+}
+
+
+#bs4-orgscale-form .osf-err-msg{
+
+  color:#c0392b;
+
+  font-size:10px;
+
+  margin-top:3px;
+}
+
+
+#bs4-orgscale-form .osf-loading{
+
+  padding:35px;
+
+  text-align:center;
+
+  color:#9b8976;
+
+  font-size:12px;
+}
+
+
+/* ============================================================
+   CONTACT BOTTOM MESSAGE
+============================================================ */
+
+.bs4-contact-note{
+
+  position:relative;
+
+  z-index:3;
+
+  text-align:center;
+
+  margin-top:28px;
+
+  color:rgba(255,255,255,.76);
+
+  font-size:10px;
+}
+
+
+.bs4-contact-note span{
+
+  color:#fff3a8;
+
+  font-weight:700;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media(max-width:1000px){
+
+  .bs4-hero-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+  .bs4-hero-desc{
+
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .bs4-buttons{
+
+    justify-content:center;
+  }
+
+  .bs4-hero-art{
+
+    min-height:400px;
+  }
+
+
+  .bs4-service-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+
+  .bs4-why-grid{
+
+    grid-template-columns:1fr;
+  }
+
+
+  .bs4-contact-grid{
+
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media(max-width:650px){
+
+  .bs4-container{
+
+    width:
+      calc(100% - 26px);
+  }
+
+
+  .bs4-hero{
+
+    min-height:auto;
+  }
+
+
+  .bs4-hero-grid{
+
+    padding:65px 0 90px;
+
+    gap:20px;
+  }
+
+
+  .bs4-hero h1{
+
+    font-size:39px;
+  }
+
+
+  .bs4-hero-desc{
+
+    font-size:13px;
+  }
+
+
+  .bs4-art-ring{
+
+    width:300px;
+    height:300px;
+  }
+
+
+  .bs4-art-card{
+
+    width:260px;
+
+    min-height:320px;
+  }
+
+
+  .bs4-services,
+  .bs4-why,
+  .bs4-contact{
+
+    padding:65px 0;
+  }
+
+
+  .bs4-service-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:11px;
+  }
+
+
+  .bs4-service{
+
+    padding:19px 14px;
+  }
+
+
+  .bs4-service-icon{
+
+    width:50px;
+    height:50px;
+
+    font-size:24px;
+  }
+
+
+  .bs4-service h3{
+
+    font-size:13px;
+  }
+
+
+  .bs4-service p{
+
+    font-size:10px;
+  }
+
+
+  .bs4-benefits{
+
+    grid-template-columns:1fr;
+  }
+
+
+  .bs4-how-card{
+
+    padding:24px;
+  }
+
+
+  .bs4-contact-info{
+
+    padding:23px;
+  }
+
+
+  .bs4-book-card{
+
+    padding:20px;
+  }
+
+
+  #bs4-orgscale-form
+  .osf-name-wrap{
+
+    grid-template-columns:1fr;
+  }
+
+
+  .bs4-contact-buttons{
+
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+
+@media(max-width:420px){
+
+  .bs4-service-grid{
+
+    grid-template-columns:1fr;
+  }
+
+
+  .bs4-buttons{
+
+    flex-direction:column;
+  }
+
+
+  .bs4-btn{
+
+    width:100%;
+  }
+
+
+  .bs4-contact-buttons{
+
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+</style>
+
+
+<!-- ============================================================
+     PAGE START
+============================================================ -->
+
+<div id="bs-pandit-4">
+
+
+<!-- ============================================================
+     SECTION 1
+     WELCOME / HERO
+============================================================ -->
+
+<section class="bs4-hero" id="bs4-home">
+
+  <div class="bs4-particle bs4-p1">✦</div>
+  <div class="bs4-particle bs4-p2">✧</div>
+  <div class="bs4-particle bs4-p3">🪔</div>
+  <div class="bs4-particle bs4-p4">✦</div>
+
+
+  <div class="bs4-container">
+
+    <div class="bs4-hero-grid">
+
+
+      <!-- LEFT -->
+
+      <div>
+
+        <div class="bs4-badge">
+
+          <i></i>
+
+          श्रद्धा • संस्कार • सेवा
+
+        </div>
+
+
+        <h1>
+
+          आपल्या शुभ कार्यासाठी
+
+          <span>
+            सिद्ध पंडित जी
+          </span>
+
+        </h1>
+
+
+        <p class="bs4-hero-desc">
+
+          गृहप्रवेश, सत्यनारायण पूजा, रुद्राभिषेक,
+          हवन, गणेश पूजा आणि विविध धार्मिक विधींसाठी
+          अनुभवी पंडितजी आपल्या घरी बुक करा.
+
+        </p>
+
+
+        <div class="bs4-buttons">
+
+          <a
+            href="#bs4-contact"
+            class="bs4-btn bs4-btn-orange"
+          >
+            🪔 Book Pandit Ji
+          </a>
+
+
+          <a
+            href="#bs4-services"
+            class="bs4-btn bs4-btn-white"
+          >
+            Explore Pujas →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT VISUAL -->
+
+      <div class="bs4-hero-art">
+
+        <div class="bs4-art-ring"></div>
+
+
+        <div class="bs4-art-card">
+
+
+          <div class="bs4-diya">
+
+            <div class="bs4-flame"></div>
+
+            <div class="bs4-bowl"></div>
+
+          </div>
+
+
+          <h3>
+            पंडित जी आपल्या द्वारी
+          </h3>
+
+
+          <p>
+            तुमच्या शुभ कार्यासाठी
+            योग्य पूजा आणि अनुभवी
+            पंडितजींची सेवा.
+          </p>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     SECTION 2
+     PUJA SERVICES
+============================================================ -->
+
+<section
+  class="bs4-services"
+  id="bs4-services"
+>
+
+
+  <div class="bs4-container">
+
+
+    <div class="bs4-heading">
+
+      <small>
+        OUR PUJA SERVICES
+      </small>
+
+
+      <h2>
+
+        प्रत्येक शुभ कार्यासाठी
+
+        <span>
+          योग्य पूजा
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        तुमच्या धार्मिक प्रसंगासाठी
+        अनुभवी पंडितजी आणि योग्य पूजा सेवा.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="bs4-service-grid">
+
+
+      <!-- 1 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🏠
+        </div>
+
+        <h3>
+          गृहप्रवेश पूजा
+        </h3>
+
+        <p>
+          नवीन घरासाठी सुख, शांती
+          आणि समृद्धीसाठी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 2 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🔱
+        </div>
+
+        <h3>
+          रुद्राभिषेक
+        </h3>
+
+        <p>
+          भगवान शिवाची विशेष
+          श्रद्धापूर्वक पूजा.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 3 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🕉️
+        </div>
+
+        <h3>
+          सत्यनारायण पूजा
+        </h3>
+
+        <p>
+          कुटुंबाच्या सुख-समृद्धीसाठी
+          पवित्र पूजा.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 4 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🔥
+        </div>
+
+        <h3>
+          हवन / यज्ञ
+        </h3>
+
+        <p>
+          शुद्धीकरण, शांती आणि
+          सकारात्मकतेसाठी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 5 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🌺
+        </div>
+
+        <h3>
+          गणेश पूजा
+        </h3>
+
+        <p>
+          विघ्नहर्ता श्री गणेशाची
+          मंगल पूजा.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 6 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🪷
+        </div>
+
+        <h3>
+          लक्ष्मी पूजा
+        </h3>
+
+        <p>
+          धन, समृद्धी आणि
+          सौभाग्यासाठी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 7 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          👶
+        </div>
+
+        <h3>
+          नामकरण पूजा
+        </h3>
+
+        <p>
+          बाळाच्या शुभ नामकरणासाठी
+          धार्मिक विधी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 8 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🙏
+        </div>
+
+        <h3>
+          शांती पूजा
+        </h3>
+
+        <p>
+          घरातील शांती आणि
+          सकारात्मकतेसाठी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     SECTION 3
+     WHY BHAKT SEVA + HOW IT WORKS
+============================================================ -->
+
+<section class="bs4-why" id="bs4-why">
+
+
+  <div class="bs4-container">
+
+
+    <div class="bs4-why-grid">
+
+
+      <!-- LEFT -->
+
+      <div>
+
+
+        <div class="bs4-heading"
+             style="text-align:left;margin:0 0 25px">
+
+          <small>
+            WHY BHAKT SEVA
+          </small>
+
+        </div>
+
+
+        <h2 class="bs4-why-title">
+
+          तुमच्या श्रद्धेचा
+
+          <span>
+            विश्वासाचा साथीदार
+          </span>
+
+        </h2>
+
+
+        <p class="bs4-why-text">
+
+          तुमच्या शुभ कार्यासाठी योग्य पंडितजी
+          शोधणे आणि पूजा बुक करणे आम्ही सोपे
+          आणि विश्वासार्ह बनवतो.
+
+        </p>
+
+
+        <div class="bs4-benefits">
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Verified Pandit Ji
+              </strong>
+
+              <span>
+                अनुभवी आणि सत्यापित पंडितजी
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              🏠
+            </div>
+
+            <div>
+
+              <strong>
+                Home Service
+              </strong>
+
+              <span>
+                तुमच्या सोयीच्या ठिकाणी सेवा
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              ⏰
+            </div>
+
+            <div>
+
+              <strong>
+                Flexible Timing
+              </strong>
+
+              <span>
+                तुमच्या सोयीची तारीख व वेळ
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              🪔
+            </div>
+
+            <div>
+
+              <strong>
+                Puja Guidance
+              </strong>
+
+              <span>
+                पूजा सामग्रीसाठी मार्गदर्शन
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              📱
+            </div>
+
+            <div>
+
+              <strong>
+                Easy Booking
+              </strong>
+
+              <span>
+                सोपी ऑनलाइन booking प्रक्रिया
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              🙏
+            </div>
+
+            <div>
+
+              <strong>
+                Trusted Service
+              </strong>
+
+              <span>
+                श्रद्धेने आणि काळजीपूर्वक सेवा
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT -->
+
+      <div class="bs4-how-card">
+
+
+        <h3>
+          🪔 पंडितजी बुक करणे सोपे आहे
+        </h3>
+
+
+        <!-- STEP 1 -->
+
+        <div class="bs4-step">
+
+          <div class="bs4-step-num">
+            1
+          </div>
+
+          <div>
+
+            <h4>
+              पूजा निवडा
+            </h4>
+
+            <p>
+              तुमच्या शुभ कार्यासाठी
+              आवश्यक पूजा निवडा.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="bs4-step">
+
+          <div class="bs4-step-num">
+            2
+          </div>
+
+          <div>
+
+            <h4>
+              तारीख व वेळ द्या
+            </h4>
+
+            <p>
+              तुमची preferred date आणि
+              वेळ booking form मध्ये भरा.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div class="bs4-step">
+
+          <div class="bs4-step-num">
+            3
+          </div>
+
+          <div>
+
+            <h4>
+              तपशील भरा
+            </h4>
+
+            <p>
+              तुमचे नाव, location आणि
+              आवश्यक माहिती द्या.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 4 -->
+
+        <div class="bs4-step">
+
+          <div class="bs4-step-num">
+            4
+          </div>
+
+          <div>
+
+            <h4>
+              Booking Confirm करा
+            </h4>
+
+            <p>
+              तुमची booking request submit
+              करा आणि आमच्या टीमशी संपर्क साधा.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     SECTION 4
+     CONTACT + BOOKING
+============================================================ -->
+
+<section
+  class="bs4-contact"
+  id="bs4-contact"
+>
+
+
+  <div class="bs4-container">
+
+
+    <div class="bs4-contact-heading">
+
+      <small>
+        CONTACT & BOOKING
+      </small>
+
+
+      <h2>
+
+        आपल्या शुभ कार्यासाठी
+
+        <span>
+          पंडितजी आजच बुक करा
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        तुमची पूजा, तारीख आणि आवश्यक माहिती
+        भरा. Bhakt Seva टीम तुमच्या booking
+        request वर पुढील प्रक्रिया करेल.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="bs4-contact-grid">
+
+
+      <!-- ==========================================
+           CONTACT INFORMATION
+      ========================================== -->
+
+      <div class="bs4-contact-info">
+
+
+        <h3>
+          🙏 आमच्याशी संपर्क करा
+        </h3>
+
+
+        <p>
+
+          पूजा किंवा पंडितजी booking संदर्भात
+          काही प्रश्न असल्यास आम्हाला संपर्क करा.
+
+        </p>
+
+
+        <!-- PHONE -->
+
+        <a
+          href="tel:+919999999999"
+          class="bs4-contact-item"
+        >
+
+          <div class="bs4-contact-icon">
+            📞
+          </div>
+
+          <div>
+
+            <strong>
+              Call Us
+            </strong>
+
+            <span>
+              +91 99999 99999
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+          href="https://wa.me/919999999999"
+          target="_blank"
+          rel="noopener"
+          class="bs4-contact-item"
+        >
+
+          <div class="bs4-contact-icon">
+            💬
+          </div>
+
+          <div>
+
+            <strong>
+              WhatsApp
+            </strong>
+
+            <span>
+              Chat with Bhakt Seva
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- LOCATION -->
+
+        <div class="bs4-contact-item">
+
+          <div class="bs4-contact-icon">
+            📍
+          </div>
+
+          <div>
+
+            <strong>
+              Service
+            </strong>
+
+            <span>
+              Available as per service location
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="bs4-contact-item">
+
+          <div class="bs4-contact-icon">
+            🕐
+          </div>
+
+          <div>
+
+            <strong>
+              Booking Support
+            </strong>
+
+            <span>
+              Contact our team for assistance
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="bs4-contact-buttons">
+
+
+          <a
+            href="tel:+919999999999"
+            class="bs4-contact-btn"
+          >
+            📞 Call Now
+          </a>
+
+
+          <a
+            href="https://wa.me/919999999999"
+            target="_blank"
+            rel="noopener"
+            class="bs4-contact-btn"
+          >
+            💬 WhatsApp
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- ==========================================
+           BOOKING FORM
+      ========================================== -->
+
+      <div class="bs4-book-card">
+
+
+        <div class="bs4-book-card-head">
+
+          <h3>
+            🪔 Book a Pandit Ji
+          </h3>
+
+          <p>
+            तुमचा तपशील भरा — आमची टीम लवकरच संपर्क करेल.
+          </p>
+
+        </div>
+
+
+        <!-- EXISTING ORGSCALE FORM -->
+
+        <div id="bs4-orgscale-form">
+
+          <div class="osf-loading">
+
+            🪔 Booking form loading...
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="bs4-contact-note">
+
+      <span>🪔 श्रद्धा • संस्कार • सेवा</span>
+
+      &nbsp; | &nbsp;
+
+      Bhakt Seva — Your Trusted Puja Service
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
+
+/* ============================================================
+   ORGSCALE BOOKING FORM
+   SAME UUID + API FROM ORIGINAL CODE
+============================================================ */
+
+(function(){
+
+  var ROOT =
+    document.getElementById(
+      "bs4-orgscale-form"
+    );
+
+  if(!ROOT) return;
+
+
+  var CFG = {
+
+    uuid:
+      "03e5a14a-79ca-4e5d-9864-5dd5db9be505",
+
+    api:
+      "https://api2.orgscale.in"
+
+  };
+
+
+  var formStarted =
+    Math.floor(
+      Date.now()/1000
+    );
+
+
+  var schema = null;
+
+
+  function esc(value){
+
+    return String(value || "")
+
+      .replace(/&/g,"&amp;")
+
+      .replace(/</g,"&lt;")
+
+      .replace(/>/g,"&gt;")
+
+      .replace(/"/g,"&quot;");
+
+  }
+
+
+  /* LOAD FORM */
+
+  fetch(
+    CFG.api +
+    "/api/public/forms/" +
+    CFG.uuid +
+    "/",
+    {
+      headers:{}
+    }
+  )
+
+  .then(function(response){
+
+    if(!response.ok){
+
+      throw new Error(
+        response.status
+      );
+
+    }
+
+    return response.json();
+
+  })
+
+
+  .then(function(data){
+
+    schema = data;
+
+    renderForm(data);
+
+  })
+
+
+  .catch(function(){
+
+    ROOT.innerHTML =
+
+      "<div class='osf-loading'>" +
+
+      "This booking form is currently unavailable. " +
+
+      "Please try again later." +
+
+      "</div>";
+
+  });
+
+
+
+  /* ============================================================
+     RENDER
+  ============================================================ */
+
+  function renderForm(s){
+
+    var html =
+      '<form class="osf-form" id="bs4PanditForm" novalidate>';
+
+
+    if(
+      !s.fields_data ||
+      !Array.isArray(s.fields_data)
+    ){
+
+      html +=
+        "<p>Booking form unavailable.</p>";
+
+    }
+
+
+    else{
+
+      s.fields_data.forEach(
+        function(field){
+
+          if(
+            field.field_type ===
+            "submit"
+          ){
+
+            html +=
+
+              '<div class="osf-group">' +
+
+              '<button ' +
+              'type="submit" ' +
+              'class="osf-btn osf-btn-submit">' +
+
+              esc(
+                field.label ||
+                "Book Pandit Ji"
+              ) +
+
+              "</button>" +
+
+              "</div>";
+
+            return;
+
+          }
+
+
+          html +=
+            renderField(field);
+
+        }
+      );
+
+    }
+
+
+    html += "</form>";
+
+
+    ROOT.innerHTML =
+      html;
+
+
+    wireForm(s);
+
+  }
+
+
+
+  /* ============================================================
+     FIELD RENDERER
+  ============================================================ */
+
+  function renderField(f){
+
+    var id =
+      "bs4_" +
+      f.field_key;
+
+
+    var cfg =
+      f.config || {};
+
+
+    var opts =
+      f.options || [];
+
+
+    var type =
+      f.field_type;
+
+
+    /* divider */
+
+    if(type === "divider"){
+
+      return `
+        <hr
+          style="
+            border:0;
+            border-top:1px solid #eee3d7;
+            margin:4px 0;
+          "
+        >
+      `;
+
+    }
+
+
+    /* spacer */
+
+    if(type === "spacer"){
+
+      return `
+        <div
+          style="
+            height:${cfg.height || 20}px
+          "
+        ></div>
+      `;
+
+    }
+
+
+    /* heading */
+
+    if(type === "heading"){
+
+      return `
+
+        <h3
+          style="
+            color:#604735;
+            font-family:
+              'Noto Sans Devanagari',
+              sans-serif;
+            margin:5px 0;
+          "
+        >
+          ${esc(f.label)}
+        </h3>
+
+      `;
+
+    }
+
+
+    /* paragraph */
+
+    if(type === "paragraph"){
+
+      return `
+
+        <p
+          style="
+            color:#806d5c;
+            font-size:12px;
+            line-height:1.7;
+            margin:0;
+          "
+        >
+          ${esc(f.label)}
+        </p>
+
+      `;
+
+    }
+
+
+    /* hidden */
+
+    if(type === "hidden"){
+
+      return `
+
+        <input
+          type="hidden"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          value="${esc(
+            cfg.default_value || ""
+          )}"
+        >
+
+      `;
+
+    }
+
+
+    var required =
+      f.required
+      ? "required"
+      : "";
+
+
+    var label =
+      f.label
+      ?
+
+      `<label
+        class="osf-label"
+        for="${id}"
+      >
+        ${esc(f.label)}
+
+        ${
+          f.required
+          ? '<span class="osf-req">*</span>'
+          : ''
+        }
+
+      </label>`
+
+      :
+
+      "";
+
+
+    var help =
+      f.help_text
+
+      ?
+
+      `<div class="osf-help">
+        ${esc(f.help_text)}
+      </div>`
+
+      :
+
+      "";
+
+
+    var inner = "";
+
+
+    /* TEXT TYPES */
+
+    if(
+
+      type === "text" ||
+      type === "email" ||
+      type === "phone" ||
+      type === "number" ||
+      type === "url" ||
+      type === "password"
+
+    ){
+
+      var inputType =
+        type === "phone"
+        ? "tel"
+        : type;
+
+
+      inner = `
+
+        <input
+          class="osf-input"
+          type="${inputType}"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          placeholder="${esc(
+            f.placeholder || ""
+          )}"
+          ${required}
+        >
+
+      `;
+
+    }
+
+
+    /* TEXTAREA */
+
+    else if(
+      type === "textarea"
+    ){
+
+      inner = `
+
+        <textarea
+          class="osf-input"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          placeholder="${esc(
+            f.placeholder || ""
+          )}"
+          ${required}
+        ></textarea>
+
+      `;
+
+    }
+
+
+    /* DATE */
+
+    else if(
+      type === "date"
+    ){
+
+      inner = `
+
+        <input
+          class="osf-input"
+          type="date"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          ${required}
+        >
+
+      `;
+
+    }
+
+
+    /* TIME */
+
+    else if(
+      type === "time"
+    ){
+
+      inner = `
+
+        <input
+          class="osf-input"
+          type="time"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          ${required}
+        >
+
+      `;
+
+    }
+
+
+    /* DATETIME */
+
+    else if(
+      type === "datetime"
+    ){
+
+      inner = `
+
+        <input
+          class="osf-input"
+          type="datetime-local"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          ${required}
+        >
+
+      `;
+
+    }
+
+
+    /* MONTH */
+
+    else if(
+      type === "month"
+    ){
+
+      inner = `
+
+        <input
+          class="osf-input"
+          type="month"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          ${required}
+        >
+
+      `;
+
+    }
+
+
+    /* CURRENCY */
+
+    else if(
+      type === "currency"
+    ){
+
+      inner = `
+
+        <div style="position:relative">
+
+          <span
+            style="
+              position:absolute;
+              left:13px;
+              top:12px;
+              color:#a56b0c;
+              font-weight:700;
+              font-size:12px;
+            "
+          >
+            ${esc(
+              cfg.symbol || "₹"
+            )}
+          </span>
+
+          <input
+            class="osf-input"
+            style="padding-left:32px"
+            type="number"
+            id="${id}"
+            name="${esc(f.field_key)}"
+            placeholder="0.00"
+            min="0"
+            step="0.01"
+            ${required}
+          >
+
+        </div>
+
+      `;
+
+    }
+
+
+    /* DROPDOWN */
+
+    else if(
+      type === "dropdown"
+    ){
+
+      inner = `
+
+        <select
+          class="osf-input"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          ${required}
+        >
+
+          <option value="">
+            ${esc(
+              f.placeholder ||
+              "Select..."
+            )}
+          </option>
+
+      `;
+
+
+      opts.forEach(
+        function(o){
+
+          var optionLabel =
+            typeof o === "object"
+            ? o.label
+            : o;
+
+
+          var optionValue =
+            typeof o === "object"
+            ? o.value
+            : o;
+
+
+          inner += `
+
+            <option
+              value="${esc(
+                optionValue
+              )}"
+            >
+              ${esc(
+                optionLabel
+              )}
+            </option>
+
+          `;
+
+        }
+      );
+
+
+      inner +=
+        "</select>";
+
+    }
+
+
+    /* MULTISELECT */
+
+    else if(
+      type === "multiselect"
+    ){
+
+      inner = `
+
+        <select
+          class="osf-input"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          multiple
+          size="4"
+          ${required}
+        >
+
+      `;
+
+
+      opts.forEach(
+        function(o){
+
+          var optionLabel =
+            typeof o === "object"
+            ? o.label
+            : o;
+
+
+          var optionValue =
+            typeof o === "object"
+            ? o.value
+            : o;
+
+
+          inner += `
+
+            <option
+              value="${esc(
+                optionValue
+              )}"
+            >
+              ${esc(
+                optionLabel
+              )}
+            </option>
+
+          `;
+
+        }
+      );
+
+
+      inner +=
+        "</select>";
+
+    }
+
+
+    /* RADIO */
+
+    else if(
+      type === "radio"
+    ){
+
+      inner =
+        '<div class="osf-radio-group">';
+
+
+      opts.forEach(
+        function(o){
+
+          var optionLabel =
+            typeof o === "object"
+            ? o.label
+            : o;
+
+
+          var optionValue =
+            typeof o === "object"
+            ? o.value
+            : o;
+
+
+          inner += `
+
+            <label
+              class="osf-radio-opt"
+            >
+
+              <input
+                type="radio"
+                name="${esc(
+                  f.field_key
+                )}"
+                value="${esc(
+                  optionValue
+                )}"
+                ${required}
+              >
+
+              ${esc(
+                optionLabel
+              )}
+
+            </label>
+
+          `;
+
+        }
+      );
+
+
+      inner +=
+        "</div>";
+
+    }
+
+
+    /* CHECKBOX */
+
+    else if(
+      type === "checkbox"
+    ){
+
+      inner =
+        '<div class="osf-check-group">';
+
+
+      opts.forEach(
+        function(o){
+
+          var optionLabel =
+            typeof o === "object"
+            ? o.label
+            : o;
+
+
+          var optionValue =
+            typeof o === "object"
+            ? o.value
+            : o;
+
+
+          inner += `
+
+            <label
+              class="osf-check-opt"
+            >
+
+              <input
+                type="checkbox"
+                name="${esc(
+                  f.field_key
+                )}"
+                value="${esc(
+                  optionValue
+                )}"
+              >
+
+              ${esc(
+                optionLabel
+              )}
+
+            </label>
+
+          `;
+
+        }
+      );
+
+
+      inner +=
+        "</div>";
+
+    }
+
+
+    /* NAME */
+
+    else if(
+      type === "name"
+    ){
+
+      inner = `
+
+        <div
+          class="osf-name-wrap"
+        >
+
+          <input
+            class="osf-input"
+            name="${esc(
+              f.field_key
+            )}_first"
+            placeholder="First name"
+            ${required}
+          >
+
+          <input
+            class="osf-input"
+            name="${esc(
+              f.field_key
+            )}_last"
+            placeholder="Last name"
+          >
+
+        </div>
+
+      `;
+
+    }
+
+
+    /* ADDRESS */
+
+    else if(
+      type === "address"
+    ){
+
+      inner = `
+
+        <div
+          class="osf-addr-wrap"
+        >
+
+          <input
+            class="osf-input"
+            name="${esc(
+              f.field_key
+            )}_street"
+            placeholder="Street address"
+            ${required}
+          >
+
+          <input
+            class="osf-input"
+            name="${esc(
+              f.field_key
+            )}_city"
+            placeholder="City"
+          >
+
+          <div
+            style="
+              display:grid;
+              grid-template-columns:
+                1fr 1fr;
+              gap:8px;
+            "
+          >
+
+            <input
+              class="osf-input"
+              name="${esc(
+                f.field_key
+              )}_state"
+              placeholder="State"
+            >
+
+            <input
+              class="osf-input"
+              name="${esc(
+                f.field_key
+              )}_zip"
+              placeholder="ZIP / Postal code"
+            >
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+
+
+    /* TERMS */
+
+    else if(
+      type === "terms"
+    ){
+
+      inner = `
+
+        <label
+          style="
+            display:flex;
+            gap:8px;
+            align-items:flex-start;
+            color:#705c4b;
+            font-size:11px;
+            line-height:1.6;
+          "
+        >
+
+          <input
+            type="checkbox"
+            id="${id}"
+            name="${esc(
+              f.field_key
+            )}"
+            value="accepted"
+            ${required}
+          >
+
+          <span>
+            ${esc(f.label)}
+          </span>
+
+        </label>
+
+      `;
+
+      label = "";
+
+    }
+
+
+    /* FILE */
+
+    else if(
+      type === "file" ||
+      type === "image" ||
+      type === "multifile"
+    ){
+
+      var accept =
+        type === "image"
+        ? 'accept="image/*"'
+        : "";
+
+
+      var multiple =
+        type === "multifile"
+        ? "multiple"
+        : "";
+
+
+      inner = `
+
+        <input
+          class="osf-input"
+          type="file"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          ${accept}
+          ${multiple}
+          ${required}
+        >
+
+      `;
+
+    }
+
+
+    /* DEFAULT */
+
+    else{
+
+      inner = `
+
+        <input
+          class="osf-input"
+          type="text"
+          id="${id}"
+          name="${esc(f.field_key)}"
+          placeholder="${esc(
+            f.placeholder || ""
+          )}"
+          ${required}
+        >
+
+      `;
+
+    }
+
+
+    return `
+
+      <div
+        class="osf-group"
+        id="bs4-group-${esc(
+          f.field_key
+        )}"
+      >
+
+        ${label}
+
+        ${inner}
+
+        ${help}
+
+      </div>
+
+    `;
+
+  }
+
+
+
+  /* ============================================================
+     FORM SUBMIT
+  ============================================================ */
+
+  function wireForm(s){
+
+    var form =
+      document.getElementById(
+        "bs4PanditForm"
+      );
+
+
+    if(!form) return;
+
+
+    form.addEventListener(
+      "submit",
+      function(e){
+
+        e.preventDefault();
+
+
+        var submitButton =
+          form.querySelector(
+            ".osf-btn-submit"
+          );
+
+
+        if(submitButton){
+
+          submitButton.disabled =
+            true;
+
+          submitButton.innerHTML =
+            "Submitting Booking...";
+
+        }
+
+
+        var data = {};
+
+
+        /* COLLECT DATA */
+
+        s.fields_data.forEach(
+          function(f){
+
+            var type =
+              f.field_type;
+
+
+            if(
+
+              [
+                "divider",
+                "spacer",
+                "heading",
+                "paragraph",
+                "submit",
+                "reset",
+                "next_step",
+                "conditional"
+              ].indexOf(type) >= 0
+
+            ){
+
+              return;
+
+            }
+
+
+            /* RADIO */
+
+            if(
+              type === "radio"
+            ){
+
+              var radio =
+                form.querySelector(
+                  "[name='" +
+                  f.field_key +
+                  "']:checked"
+                );
+
+
+              data[f.field_key] =
+                radio
+                ? radio.value
+                : "";
+
+            }
+
+
+            /* CHECKBOX */
+
+            else if(
+              type === "checkbox"
+            ){
+
+              var checks =
+                form.querySelectorAll(
+                  "[name='" +
+                  f.field_key +
+                  "']:checked"
+                );
+
+
+              data[f.field_key] =
+                Array.prototype.map.call(
+                  checks,
+                  function(item){
+
+                    return item.value;
+
+                  }
+                );
+
+            }
+
+
+            /* MULTISELECT */
+
+            else if(
+              type === "multiselect"
+            ){
+
+              var select =
+                document.getElementById(
+                  "bs4_" +
+                  f.field_key
+                );
+
+
+              if(select){
+
+                data[f.field_key] =
+                  Array.prototype
+                  .filter.call(
+                    select.options,
+                    function(option){
+
+                      return option.selected;
+
+                    }
+                  )
+                  .map(
+                    function(option){
+
+                      return option.value;
+
+                    }
+                  );
+
+              }
+
+            }
+
+
+            /* NAME */
+
+            else if(
+              type === "name"
+            ){
+
+              var first =
+                form.querySelector(
+                  "[name='" +
+                  f.field_key +
+                  "_first']"
+                );
+
+
+              var last =
+                form.querySelector(
+                  "[name='" +
+                  f.field_key +
+                  "_last']"
+                );
+
+
+              data[f.field_key] = {
+
+                first:
+                  first
+                  ? first.value
+                  : "",
+
+                last:
+                  last
+                  ? last.value
+                  : ""
+
+              };
+
+            }
+
+
+            /* ADDRESS */
+
+            else if(
+              type === "address"
+            ){
+
+              var address = {};
+
+
+              [
+                "street",
+                "city",
+                "state",
+                "zip"
+              ]
+              .forEach(
+                function(part){
+
+                  var field =
+                    form.querySelector(
+                      "[name='" +
+                      f.field_key +
+                      "_" +
+                      part +
+                      "']"
+                    );
+
+
+                  address[part] =
+                    field
+                    ? field.value
+                    : "";
+
+                }
+              );
+
+
+              data[f.field_key] =
+                address;
+
+            }
+
+
+            /* TERMS */
+
+            else if(
+              type === "terms"
+            ){
+
+              var terms =
+                document.getElementById(
+                  "bs4_" +
+                  f.field_key
+                );
+
+
+              data[f.field_key] =
+                terms &&
+                terms.checked
+                ? "accepted"
+                : "";
+
+            }
+
+
+            /* FILE */
+
+            else if(
+
+              type === "file" ||
+              type === "image" ||
+              type === "multifile"
+
+            ){
+
+              var fileInput =
+                document.getElementById(
+                  "bs4_" +
+                  f.field_key
+                );
+
+
+              if(
+                fileInput &&
+                fileInput.files.length
+              ){
+
+                data[f.field_key] =
+                  fileInput.files[0].name;
+
+              }else{
+
+                data[f.field_key] =
+                  "";
+
+              }
+
+            }
+
+
+            /* NORMAL */
+
+            else{
+
+              var element =
+                document.getElementById(
+                  "bs4_" +
+                  f.field_key
+                );
+
+
+              if(!element){
+
+                element =
+                  form.querySelector(
+                    "[name='" +
+                    f.field_key +
+                    "']"
+                  );
+
+              }
+
+
+              data[f.field_key] =
+                element
+                ? element.value
+                : "";
+
+            }
+
+          }
+        );
+
+
+        /* ======================================================
+           VALIDATE
+        ====================================================== */
+
+        var valid = true;
+
+        var firstError = null;
+
+
+        s.fields_data.forEach(
+          function(f){
+
+            if(!f.required) return;
+
+
+            var value =
+              data[f.field_key];
+
+
+            var empty =
+              value == null ||
+              value === "" ||
+              value === false ||
+              (
+                Array.isArray(value) &&
+                value.length === 0
+              );
+
+
+            if(empty){
+
+              valid = false;
+
+
+              var group =
+                document.getElementById(
+                  "bs4-group-" +
+                  f.field_key
+                );
+
+
+              if(group){
+
+                if(
+                  !group.querySelector(
+                    ".osf-err-msg"
+                  )
+                ){
+
+                  var error =
+                    document.createElement(
+                      "div"
+                    );
+
+
+                  error.className =
+                    "osf-err-msg";
+
+
+                  error.textContent =
+                    "This field is required.";
+
+
+                  group.appendChild(
+                    error
+                  );
+
+                }
+
+
+                if(!firstError){
+
+                  firstError =
+                    group;
+
+                }
+
+              }
+
+            }
+
+          }
+        );
+
+
+        if(!valid){
+
+          if(firstError){
+
+            firstError.scrollIntoView({
+
+              behavior:"smooth",
+
+              block:"center"
+
+            });
+
+          }
+
+
+          if(submitButton){
+
+            submitButton.disabled =
+              false;
+
+            submitButton.innerHTML =
+              "Book Pandit Ji";
+
+          }
+
+
+          return;
+
+        }
+
+
+        /* ======================================================
+           SUBMIT
+        ====================================================== */
+
+        fetch(
+
+          CFG.api +
+          "/api/public/forms/" +
+          CFG.uuid +
+          "/submit/",
+
+          {
+
+            method:"POST",
+
+            headers:{
+
+              "Content-Type":
+                "application/json"
+
+            },
+
+            body:JSON.stringify({
+
+              data:data,
+
+              _hp_website:"",
+
+              _form_started_at:
+                formStarted
+
+            })
+
+          }
+
+        )
+
+
+        .then(
+          function(response){
+
+            return response.json()
+              .then(
+                function(result){
+
+                  return {
+
+                    ok:
+                      response.ok,
+
+                    data:
+                      result
+
+                  };
+
+                }
+              );
+
+          }
+        )
+
+
+        .then(
+          function(result){
+
+            if(result.ok){
+
+              var message =
+                result.data &&
+                result.data.detail
+                ? result.data.detail
+                :
+                (
+                  s.success_message ||
+                  "Your Pandit Ji booking request has been submitted successfully."
+                );
+
+
+              var reference =
+                result.data &&
+                result.data.reference_number
+                ?
+                result.data.reference_number
+                :
+                "";
+
+
+              ROOT.innerHTML = `
+
+                <div class="osf-success">
+
+                  🪔
+
+                  ${esc(message)}
+
+                  ${
+                    reference
+                    ?
+
+                    `<div
+                      style="
+                        margin-top:9px;
+                        color:#604735;
+                        font-size:11px;
+                      "
+                    >
+
+                      Booking Reference:
+
+                      <strong>
+                        ${esc(reference)}
+                      </strong>
+
+                    </div>`
+
+                    :
+
+                    ""
+                  }
+
+                </div>
+
+              `;
+
+            }
+
+
+            else{
+
+              throw new Error(
+
+                (
+                  result.data &&
+                  result.data.detail
+                )
+
+                ||
+
+                "Submission failed. Please try again."
+
+              );
+
+            }
+
+          }
+        )
+
+
+        .catch(
+          function(error){
+
+            if(submitButton){
+
+              submitButton.disabled =
+                false;
+
+              submitButton.innerHTML =
+                "Book Pandit Ji";
+
+            }
+
+
+            var errorBox =
+              document.createElement(
+                "div"
+              );
+
+
+            errorBox.className =
+              "osf-err-msg";
+
+
+            errorBox.style.marginTop =
+              "8px";
+
+
+            errorBox.textContent =
+              error.message ||
+              "Network error. Please try again.";
+
+
+            form.appendChild(
+              errorBox
+            );
+
+          }
+        );
+
+
+      }
+    );
+
+  }
+
+
+})();
+
+
+/* ============================================================
+   SMOOTH SCROLL
+============================================================ */
+
+document.addEventListener(
+  "click",
+  function(e){
+
+    var link =
+      e.target.closest(
+        'a[href^="#"]'
+      );
+
+
+    if(!link) return;
+
+
+    var target =
+      document.querySelector(
+        link.getAttribute("href")
+      );
+
+
+    if(!target) return;
+
+
+    e.preventDefault();
+
+
+    target.scrollIntoView({
+
+      behavior:"smooth",
+
+      block:"start"
+
+    });
+
+  }
+);
+
+</script>

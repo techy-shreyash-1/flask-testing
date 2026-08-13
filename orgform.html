@@ -1,0 +1,3610 @@
+<!-- ============================================================
+     BHAKT SEVA — PANDIT JI
+     PREMIUM 4 SECTION DESIGN
+     Orange + Gold + White + Soft Pink
+     Elementor HTML Widget
+============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* ============================================================
+   ROOT
+============================================================ */
+
+#bs-pandit-4{
+
+  --orange:#f47b20;
+  --orange2:#ff9f43;
+  --orange3:#ffd0a3;
+
+  --gold:#d6a43b;
+  --gold2:#f8d77d;
+  --gold3:#fff0b8;
+
+  --pink:#f8c8d8;
+  --pink2:#fde7ee;
+  --pink3:#fff4f7;
+
+  --cream:#fffaf2;
+  --cream2:#fff1df;
+
+  --white:#ffffff;
+
+  --brown:#604735;
+  --dark:#332116;
+
+  --green:#23815c;
+
+  font-family:'Poppins',sans-serif;
+  color:var(--dark);
+  background:var(--cream);
+
+  overflow:hidden;
+  width:100%;
+  position:relative;
+}
+
+#bs-pandit-4 *,
+#bs-pandit-4 *:before,
+#bs-pandit-4 *:after{
+  box-sizing:border-box;
+}
+
+#bs-pandit-4 a{
+  text-decoration:none;
+}
+
+.bs4-container{
+  width:min(1180px,calc(100% - 36px));
+  margin:auto;
+}
+
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes bs4Float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-15px);
+  }
+}
+
+@keyframes bs4Float2{
+  0%,100%{
+    transform:translate(0,0);
+  }
+  50%{
+    transform:translate(12px,-18px);
+  }
+}
+
+@keyframes bs4Rotate{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes bs4Pulse{
+  0%,100%{
+    transform:scale(1);
+    opacity:.75;
+  }
+  50%{
+    transform:scale(1.12);
+    opacity:1;
+  }
+}
+
+@keyframes bs4Glow{
+  0%,100%{
+    box-shadow:0 0 15px rgba(244,123,32,.20);
+  }
+  50%{
+    box-shadow:0 0 40px rgba(244,123,32,.45);
+  }
+}
+
+@keyframes bs4Shine{
+  0%{
+    left:-100%;
+  }
+  100%{
+    left:130%;
+  }
+}
+
+@keyframes bs4Reveal{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* ============================================================
+   SECTION 1 — HERO
+============================================================ */
+
+.bs4-hero{
+
+  min-height:680px;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(241, 147, 5, 0.911),
+      transparent 20%
+    ),
+
+    radial-gradient(
+      circle at 88% 25%,
+      rgba(233, 114, 3, 0.945),
+      transparent 23%
+    ),
+
+    radial-gradient(
+      circle at 75% 90%,
+      rgba(255,175,108,.30),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fffaf2 0%,
+      #fff1df 35%,
+      #fde5ec 67%,
+      #ffe2c0 100%
+    );
+}
+
+
+/* decorative circles */
+
+.bs4-hero:before{
+  content:"";
+  position:absolute;
+
+  width:520px;
+  height:520px;
+
+  right:-170px;
+  top:-170px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(214,164,59,.25);
+
+  box-shadow:
+    0 0 0 55px rgba(214,164,59,.055),
+    0 0 0 110px rgba(244,123,32,.035);
+
+  animation:bs4Rotate 35s linear infinite;
+}
+
+
+.bs4-hero:after{
+  content:"";
+
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  left:-150px;
+  bottom:-170px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(244,123,32,.17),
+      transparent 68%
+    );
+
+  animation:bs4Pulse 5s ease-in-out infinite;
+}
+
+
+/* floating particles */
+
+.bs4-particle{
+  position:absolute;
+  color:var(--gold);
+  opacity:.6;
+  z-index:1;
+  animation:bs4Float2 5s ease-in-out infinite;
+}
+
+.bs4-p1{
+  left:8%;
+  top:20%;
+  font-size:24px;
+}
+
+.bs4-p2{
+  left:15%;
+  bottom:18%;
+  font-size:18px;
+  animation-delay:1s;
+}
+
+.bs4-p3{
+  right:18%;
+  top:18%;
+  font-size:28px;
+  animation-delay:2s;
+}
+
+.bs4-p4{
+  right:9%;
+  bottom:20%;
+  font-size:20px;
+  animation-delay:1.5s;
+}
+
+
+/* hero layout */
+
+.bs4-hero-grid{
+
+  position:relative;
+  z-index:3;
+
+  display:grid;
+
+  grid-template-columns:1.05fr .95fr;
+
+  gap:55px;
+
+  align-items:center;
+
+  padding:80px 0;
+}
+
+
+/* hero text */
+
+.bs4-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 16px;
+
+  border-radius:50px;
+
+  background:rgba(255,255,255,.72);
+
+  border:1px solid rgba(214,164,59,.35);
+
+  box-shadow:0 7px 20px rgba(80,40,10,.07);
+
+  color:#a56b0c;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  backdrop-filter:blur(8px);
+}
+
+.bs4-badge i{
+
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:var(--orange);
+
+  box-shadow:0 0 12px var(--orange);
+
+  animation:bs4Pulse 1.7s infinite;
+}
+
+
+.bs4-hero h1{
+
+  margin:22px 0 12px;
+
+  font-family:'Noto Sans Devanagari',
+              'Cormorant Garamond',
+              serif;
+
+  font-size:clamp(40px,5.3vw,68px);
+
+  line-height:1.12;
+
+  color:#50331f;
+
+  font-weight:800;
+}
+
+.bs4-hero h1 span{
+
+  display:block;
+
+  color:var(--orange);
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:.78em;
+
+  font-style:italic;
+}
+
+
+.bs4-hero-desc{
+
+  max-width:650px;
+
+  color:#755f4d;
+
+  font-size:16px;
+
+  line-height:1.85;
+
+  margin:18px 0 28px;
+}
+
+
+/* buttons */
+
+.bs4-buttons{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+}
+
+
+.bs4-btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+
+  min-height:50px;
+
+  padding:13px 25px;
+
+  border-radius:50px;
+
+  font-size:13px;
+
+  font-weight:800;
+
+  transition:.3s ease;
+
+  cursor:pointer;
+}
+
+
+.bs4-btn-orange{
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f47b20,
+      #ffad5c
+    );
+
+  box-shadow:
+    0 12px 30px rgba(244,123,32,.30);
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.bs4-btn-orange:before{
+
+  content:"";
+
+  position:absolute;
+
+  width:60px;
+
+  height:150%;
+
+  background:rgba(255,255,255,.25);
+
+  transform:rotate(25deg);
+
+  top:-20%;
+
+  left:-100%;
+
+  animation:bs4Shine 4s infinite;
+}
+
+.bs4-btn-orange:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 18px 40px rgba(244,123,32,.40);
+
+  color:#fff;
+}
+
+
+.bs4-btn-white{
+
+  color:#a85b19;
+
+  background:#fff;
+
+  border:1px solid #f0d7b9;
+
+  box-shadow:0 7px 20px rgba(80,40,10,.06);
+}
+
+.bs4-btn-white:hover{
+
+  transform:translateY(-4px);
+
+  border-color:var(--orange);
+
+  color:var(--orange);
+}
+
+
+/* hero visual */
+
+.bs4-hero-art{
+
+  min-height:450px;
+
+  position:relative;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+}
+
+
+.bs4-art-ring{
+
+  position:absolute;
+
+  width:410px;
+  height:410px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(214,164,59,.32);
+
+  animation:bs4Rotate 28s linear infinite;
+}
+
+.bs4-art-ring:before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:38px;
+
+  border-radius:50%;
+
+  border:1px dashed rgba(244,123,32,.28);
+}
+
+.bs4-art-ring:after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:78px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(248,200,216,.6);
+}
+
+
+.bs4-art-card{
+
+  width:300px;
+  min-height:360px;
+
+  position:relative;
+
+  z-index:3;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:30px;
+
+  border-radius:35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.92),
+      rgba(255,244,247,.88)
+    );
+
+  border:1px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 25px 60px rgba(128,70,35,.16);
+
+  backdrop-filter:blur(12px);
+
+  animation:bs4Float 5s ease-in-out infinite;
+}
+
+
+/* diya */
+
+.bs4-diya{
+
+  position:relative;
+
+  width:140px;
+  height:150px;
+
+  margin-bottom:15px;
+}
+
+
+.bs4-flame{
+
+  position:absolute;
+
+  left:50%;
+  top:5px;
+
+  width:48px;
+  height:83px;
+
+  transform:translateX(-50%);
+
+  border-radius:
+    55% 45% 55% 45%;
+
+  background:
+    linear-gradient(
+      #fff8be,
+      #ffc145 45%,
+      #f47b20
+    );
+
+  filter:
+    drop-shadow(
+      0 0 22px
+      rgba(255,180,40,.85)
+    );
+
+  animation:bs4Pulse 1.7s infinite;
+}
+
+
+.bs4-flame:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:20px;
+  height:40px;
+
+  left:14px;
+  top:20px;
+
+  border-radius:50%;
+
+  background:#fff;
+}
+
+
+.bs4-bowl{
+
+  position:absolute;
+
+  left:50%;
+  bottom:18px;
+
+  transform:translateX(-50%);
+
+  width:135px;
+  height:52px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      #ffae61,
+      #d75f15
+    );
+
+  box-shadow:
+    0 14px 25px rgba(100,45,10,.20);
+}
+
+.bs4-bowl:before{
+
+  content:"";
+
+  position:absolute;
+
+  left:15px;
+  right:15px;
+  top:8px;
+
+  height:15px;
+
+  border-radius:50%;
+
+  background:#8e4014;
+}
+
+
+.bs4-art-card h3{
+
+  margin:5px 0 6px;
+
+  font-family:'Noto Sans Devanagari',sans-serif;
+
+  color:#543621;
+
+  font-size:21px;
+}
+
+
+.bs4-art-card p{
+
+  margin:0;
+
+  color:#8b7461;
+
+  font-size:12px;
+
+  line-height:1.7;
+}
+
+
+/* ============================================================
+   SECTION 2 — PUJA SERVICES
+============================================================ */
+
+.bs4-services{
+
+  padding:90px 0;
+
+  position:relative;
+
+  background:
+
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(244,123,32,.10),
+      transparent 20%
+    ),
+
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(248,200,216,.22),
+      transparent 24%
+    ),
+
+    linear-gradient(
+      180deg,
+      #fffdf9,
+      #fff8ef
+    );
+}
+
+
+.bs4-heading{
+
+  text-align:center;
+
+  max-width:700px;
+
+  margin:0 auto 45px;
+}
+
+
+.bs4-heading small{
+
+  color:var(--orange);
+
+  font-size:11px;
+
+  font-weight:800;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+
+.bs4-heading h2{
+
+  margin:8px 0 10px;
+
+  color:#543621;
+
+  font-family:'Noto Sans Devanagari',
+              'Cormorant Garamond',
+              serif;
+
+  font-size:clamp(30px,4vw,46px);
+
+  line-height:1.2;
+}
+
+
+.bs4-heading h2 span{
+
+  color:var(--orange);
+}
+
+
+.bs4-heading p{
+
+  margin:0;
+
+  color:#806d5c;
+
+  font-size:14px;
+
+  line-height:1.8;
+}
+
+
+/* services */
+
+.bs4-service-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:18px;
+}
+
+
+.bs4-service{
+
+  position:relative;
+
+  padding:25px 20px;
+
+  border-radius:24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #fff8f3
+    );
+
+  border:1px solid #f0dfcf;
+
+  box-shadow:
+    0 10px 30px rgba(100,50,20,.06);
+
+  overflow:hidden;
+
+  transition:.35s ease;
+}
+
+
+.bs4-service:before{
+
+  content:"";
+
+  position:absolute;
+
+  width:100px;
+  height:100px;
+
+  right:-40px;
+  top:-40px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(248,200,216,.55),
+      transparent 68%
+    );
+}
+
+
+.bs4-service:hover{
+
+  transform:translateY(-8px);
+
+  border-color:
+    rgba(244,123,32,.35);
+
+  box-shadow:
+    0 20px 45px rgba(100,50,20,.12);
+}
+
+
+.bs4-service-icon{
+
+  width:58px;
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0d7,
+      #ffe2eb
+    );
+
+  font-size:29px;
+
+  margin-bottom:17px;
+
+  animation:bs4Float 4s ease-in-out infinite;
+}
+
+
+.bs4-service:nth-child(2)
+.bs4-service-icon{
+  animation-delay:.4s;
+}
+
+.bs4-service:nth-child(3)
+.bs4-service-icon{
+  animation-delay:.8s;
+}
+
+
+.bs4-service h3{
+
+  position:relative;
+
+  margin:0 0 7px;
+
+  color:#4e3625;
+
+  font-family:'Noto Sans Devanagari',sans-serif;
+
+  font-size:16px;
+}
+
+
+.bs4-service p{
+
+  position:relative;
+
+  margin:0 0 13px;
+
+  color:#867260;
+
+  font-size:11px;
+
+  line-height:1.7;
+}
+
+
+.bs4-service a{
+
+  position:relative;
+
+  color:var(--orange);
+
+  font-size:11px;
+
+  font-weight:800;
+}
+
+
+/* ============================================================
+   SECTION 3 — WHY + HOW
+============================================================ */
+
+.bs4-why{
+
+  padding:90px 0;
+
+  position:relative;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255,193,69,.30),
+      transparent 20%
+    ),
+
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(248,200,216,.40),
+      transparent 23%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fff0df,
+      #fde9ef 55%,
+      #fffaf2
+    );
+}
+
+
+.bs4-why-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:45px;
+
+  align-items:center;
+}
+
+
+.bs4-why-title{
+
+  font-family:
+    'Noto Sans Devanagari',
+    sans-serif;
+
+  color:#543621;
+
+  font-size:35px;
+
+  line-height:1.3;
+
+  margin:0 0 14px;
+}
+
+
+.bs4-why-title span{
+
+  color:var(--orange);
+}
+
+
+.bs4-why-text{
+
+  color:#796553;
+
+  font-size:13px;
+
+  line-height:1.8;
+
+  margin-bottom:25px;
+}
+
+
+.bs4-benefits{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+}
+
+
+.bs4-benefit{
+
+  padding:17px;
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:11px;
+
+  background:
+    rgba(255,255,255,.78);
+
+  border:
+    1px solid rgba(214,164,59,.18);
+
+  border-radius:17px;
+
+  box-shadow:
+    0 7px 22px rgba(100,50,20,.05);
+
+  transition:.3s;
+}
+
+
+.bs4-benefit:hover{
+
+  transform:translateY(-4px);
+
+  background:#fff;
+}
+
+
+.bs4-benefit-icon{
+
+  width:35px;
+  height:35px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0d0,
+      #ffe0e9
+    );
+
+  color:var(--orange);
+
+  font-size:17px;
+}
+
+
+.bs4-benefit strong{
+
+  display:block;
+
+  color:#543621;
+
+  font-size:12px;
+
+  margin-bottom:3px;
+}
+
+
+.bs4-benefit span{
+
+  color:#907b67;
+
+  font-size:10px;
+
+  line-height:1.5;
+}
+
+
+/* how card */
+
+.bs4-how-card{
+
+  padding:35px;
+
+  border-radius:30px;
+
+  background:
+    rgba(255,255,255,.75);
+
+  border:
+    1px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 20px 50px rgba(100,50,20,.10);
+
+  backdrop-filter:blur(10px);
+}
+
+
+.bs4-how-card h3{
+
+  color:#543621;
+
+  font-family:'Noto Sans Devanagari',sans-serif;
+
+  font-size:24px;
+
+  margin:0 0 25px;
+}
+
+
+.bs4-step{
+
+  display:flex;
+
+  gap:15px;
+
+  position:relative;
+
+  padding-bottom:22px;
+}
+
+
+.bs4-step:last-child{
+  padding-bottom:0;
+}
+
+
+.bs4-step:not(:last-child):after{
+
+  content:"";
+
+  position:absolute;
+
+  left:20px;
+  top:42px;
+  bottom:0;
+
+  border-left:2px dashed #e9bf7a;
+}
+
+
+.bs4-step-num{
+
+  position:relative;
+
+  z-index:2;
+
+  width:42px;
+  height:42px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f47b20,
+      #ffb45d
+    );
+
+  color:#fff;
+
+  font-weight:800;
+
+  box-shadow:
+    0 7px 18px rgba(244,123,32,.25);
+}
+
+
+.bs4-step h4{
+
+  margin:2px 0 4px;
+
+  color:#543621;
+
+  font-size:13px;
+}
+
+
+.bs4-step p{
+
+  margin:0;
+
+  color:#897461;
+
+  font-size:10px;
+
+  line-height:1.6;
+}
+
+
+/* ============================================================
+   SECTION 4 — CONTACT + BOOKING
+============================================================ */
+
+.bs4-contact{
+
+  padding:95px 0;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(255,255,255,.50),
+      transparent 20%
+    ),
+
+    radial-gradient(
+      circle at 88% 85%,
+      rgba(255,220,126,.42),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f47b20 0%,
+      #ff984a 35%,
+      #f7bfd1 72%,
+      #fff0d7 100%
+    );
+}
+
+
+/* background mandala */
+
+.bs4-contact:before{
+
+  content:"ॐ";
+
+  position:absolute;
+
+  right:-100px;
+  top:-100px;
+
+  font-family:serif;
+
+  font-size:500px;
+
+  line-height:1;
+
+  color:rgba(255,255,255,.10);
+
+  animation:bs4Rotate 40s linear infinite;
+}
+
+
+.bs4-contact:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:400px;
+  height:400px;
+
+  left:-180px;
+  bottom:-220px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,.22);
+
+  box-shadow:
+    0 0 0 50px rgba(255,255,255,.07),
+    0 0 0 100px rgba(255,255,255,.04);
+}
+
+
+/* contact heading */
+
+.bs4-contact-heading{
+
+  position:relative;
+
+  z-index:3;
+
+  text-align:center;
+
+  max-width:720px;
+
+  margin:0 auto 45px;
+}
+
+
+.bs4-contact-heading small{
+
+  color:#fff8df;
+
+  font-size:11px;
+
+  letter-spacing:2px;
+
+  font-weight:800;
+}
+
+
+.bs4-contact-heading h2{
+
+  color:#fff;
+
+  font-family:
+    'Noto Sans Devanagari',
+    sans-serif;
+
+  font-size:clamp(32px,4vw,48px);
+
+  line-height:1.25;
+
+  margin:9px 0 10px;
+}
+
+
+.bs4-contact-heading h2 span{
+
+  color:#fff0a9;
+}
+
+
+.bs4-contact-heading p{
+
+  color:rgba(255,255,255,.85);
+
+  font-size:13px;
+
+  line-height:1.8;
+
+  margin:0;
+}
+
+
+/* contact grid */
+
+.bs4-contact-grid{
+
+  position:relative;
+
+  z-index:3;
+
+  display:grid;
+
+  grid-template-columns:
+    .72fr 1.28fr;
+
+  gap:25px;
+
+  align-items:stretch;
+}
+
+
+/* left contact */
+
+.bs4-contact-info{
+
+  padding:32px;
+
+  border-radius:30px;
+
+  background:
+    rgba(255,255,255,.16);
+
+  border:
+    1px solid rgba(255,255,255,.35);
+
+  box-shadow:
+    0 20px 50px rgba(120,50,20,.15);
+
+  backdrop-filter:blur(14px);
+
+  color:#fff;
+}
+
+
+.bs4-contact-info h3{
+
+  font-family:
+    'Noto Sans Devanagari',
+    sans-serif;
+
+  font-size:25px;
+
+  margin:0 0 10px;
+}
+
+
+.bs4-contact-info>p{
+
+  color:rgba(255,255,255,.78);
+
+  font-size:12px;
+
+  line-height:1.8;
+
+  margin:0 0 25px;
+}
+
+
+.bs4-contact-item{
+
+  display:flex;
+
+  gap:13px;
+
+  align-items:center;
+
+  padding:14px;
+
+  margin-bottom:10px;
+
+  border-radius:16px;
+
+  background:
+    rgba(255,255,255,.12);
+
+  border:
+    1px solid rgba(255,255,255,.15);
+
+  transition:.3s;
+}
+
+
+.bs4-contact-item:hover{
+
+  transform:translateX(5px);
+
+  background:
+    rgba(255,255,255,.20);
+}
+
+
+.bs4-contact-icon{
+
+  width:42px;
+  height:42px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:13px;
+
+  background:#fff;
+
+  color:var(--orange);
+
+  font-size:19px;
+
+  box-shadow:
+    0 7px 18px rgba(80,40,10,.10);
+}
+
+
+.bs4-contact-item strong{
+
+  display:block;
+
+  font-size:12px;
+
+  margin-bottom:2px;
+}
+
+
+.bs4-contact-item span{
+
+  color:rgba(255,255,255,.70);
+
+  font-size:10px;
+}
+
+
+/* contact buttons */
+
+.bs4-contact-buttons{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:10px;
+
+  margin-top:18px;
+}
+
+
+.bs4-contact-btn{
+
+  min-height:46px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:7px;
+
+  border-radius:14px;
+
+  background:#fff;
+
+  color:#b95c16;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  transition:.3s;
+}
+
+
+.bs4-contact-btn:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(80,40,10,.15);
+
+  color:var(--orange);
+}
+
+
+/* booking form wrapper */
+
+.bs4-book-card{
+
+  padding:30px;
+
+  border-radius:30px;
+
+  background:
+    rgba(255,255,255,.96);
+
+  border:
+    1px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 25px 65px rgba(90,40,15,.18);
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+
+.bs4-book-card:before{
+
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  right:-80px;
+  top:-80px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(248,200,216,.6),
+      transparent 70%
+    );
+}
+
+
+.bs4-book-card-head{
+
+  position:relative;
+
+  margin-bottom:22px;
+}
+
+
+.bs4-book-card-head h3{
+
+  margin:0 0 4px;
+
+  color:#543621;
+
+  font-family:
+    'Cormorant Garamond',
+    serif;
+
+  font-size:31px;
+}
+
+
+.bs4-book-card-head p{
+
+  margin:0;
+
+  color:#927c68;
+
+  font-size:11px;
+}
+
+
+/* ============================================================
+   ATTRACTIVE ORGSCALE FORM — ENHANCED DESIGN
+============================================================ */
+
+#osf03e5a14a{
+  max-width:100% !important;
+  padding:0 !important;
+  font-family:'Poppins',sans-serif !important;
+}
+
+/* Form container with subtle gradient background */
+#osf03e5a14a .osf-form{
+  background:linear-gradient(145deg,#fffdfa,#fff8f3) !important;
+  border-radius:20px !important;
+  padding:25px 22px !important;
+  border:1px solid rgba(244,123,32,.12) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 8px 30px rgba(100,50,20,.06) !important;
+}
+
+/* Labels with icon styling */
+#osf03e5a14a .osf-label{
+  color:#543621 !important;
+  font-size:12px !important;
+  font-weight:700 !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:6px !important;
+  letter-spacing:.3px !important;
+}
+
+#osf03e5a14a .osf-label:before{
+  content:"✦" !important;
+  color:#f47b20 !important;
+  font-size:10px !important;
+  opacity:.6 !important;
+}
+
+/* Input fields with elegant styling */
+#osf03e5a14a .osf-input{
+  padding:14px 16px !important;
+  border:1.5px solid #eaded0 !important;
+  border-radius:14px !important;
+  background:#ffffff !important;
+  color:#3f2d20 !important;
+  font-size:13px !important;
+  font-family:inherit !important;
+  transition:all .3s cubic-bezier(.4,0,.2,1) !important;
+  box-shadow:0 2px 4px rgba(100,50,20,.04) !important;
+}
+
+#osf03e5a14a .osf-input:hover{
+  border-color:#d6a43b !important;
+  background:#fffdfa !important;
+}
+
+#osf03e5a14a .osf-input:focus{
+  border-color:#f47b20 !important;
+  box-shadow:0 0 0 5px rgba(244,123,32,.10),0 4px 12px rgba(244,123,32,.08) !important;
+  outline:none !important;
+  transform:translateY(-1px) !important;
+}
+
+/* Select dropdown styling */
+#osf03e5a14a select.osf-input{
+  appearance:none !important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23f47b20' d='M6 8L1 3h10z'/%3E%3C/svg%3E") !important;
+  background-repeat:no-repeat !important;
+  background-position:right 14px center !important;
+  padding-right:40px !important;
+  cursor:pointer !important;
+}
+
+/* Textarea styling */
+#osf03e5a14a textarea.osf-input{
+  min-height:100px !important;
+  resize:vertical !important;
+  line-height:1.7 !important;
+}
+
+/* Radio & Checkbox groups with enhanced styling */
+#osf03e5a14a .osf-radio-group,
+#osf03e5a14a .osf-check-group{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:10px !important;
+  padding:4px 0 !important;
+}
+
+#osf03e5a14a .osf-radio-opt,
+#osf03e5a14a .osf-check-opt{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  color:#5a4537 !important;
+  font-size:12px !important;
+  cursor:pointer !important;
+  padding:8px 12px !important;
+  border-radius:10px !important;
+  transition:all .25s ease !important;
+  background:rgba(255,255,255,.5) !important;
+  border:1px solid transparent !important;
+}
+
+#osf03e5a14a .osf-radio-opt:hover,
+#osf03e5a14a .osf-check-opt:hover{
+  background:rgba(244,123,32,.06) !important;
+  border-color:rgba(244,123,32,.15) !important;
+}
+
+#osf03e5a14a .osf-radio-opt input[type="radio"],
+#osf03e5a14a .osf-check-opt input[type="checkbox"]{
+  accent-color:#f47b20 !important;
+  width:16px !important;
+  height:16px !important;
+  cursor:pointer !important;
+}
+
+/* Submit button with premium styling */
+#osf03e5a14a .osf-btn-submit{
+  width:100% !important;
+  min-height:56px !important;
+  border:0 !important;
+  border-radius:16px !important;
+  cursor:pointer !important;
+  font-family:inherit !important;
+  font-size:15px !important;
+  font-weight:800 !important;
+  color:#fff !important;
+  background:linear-gradient(135deg,#f47b20,#ff9f43) !important;
+  box-shadow:0 8px 28px rgba(244,123,32,.35),inset 0 1px 0 rgba(255,255,255,.2) !important;
+  transition:all .35s cubic-bezier(.4,0,.2,1) !important;
+  letter-spacing:.5px !important;
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+#osf03e5a14a .osf-btn-submit:before{
+  content:"" !important;
+  position:absolute !important;
+  width:80px !important;
+  height:200% !important;
+  background:rgba(255,255,255,.15) !important;
+  transform:rotate(25deg) !important;
+  top:-50% !important;
+  left:-100% !important;
+  animation:bs4Shine 5s infinite !important;
+}
+
+#osf03e5a14a .osf-btn-submit:hover{
+  transform:translateY(-3px) !important;
+  box-shadow:0 14px 40px rgba(244,123,32,.42),inset 0 1px 0 rgba(255,255,255,.2) !important;
+}
+
+#osf03e5a14a .osf-btn-submit:active{
+  transform:translateY(0px) !important;
+}
+
+#osf03e5a14a .osf-btn-submit:disabled{
+  opacity:.65 !important;
+  cursor:not-allowed !important;
+  transform:none !important;
+}
+
+/* Success message with celebration styling */
+#osf03e5a14a .osf-success{
+  padding:30px 25px !important;
+  text-align:center !important;
+  border-radius:20px !important;
+  background:linear-gradient(135deg,#effaf4,#d4f5e6) !important;
+  border:1px solid #a8e6c2 !important;
+  color:#167b51 !important;
+  font-size:15px !important;
+  font-weight:700 !important;
+  line-height:1.8 !important;
+  box-shadow:0 8px 30px rgba(22,123,81,.12) !important;
+}
+
+#osf03e5a14a .osf-success:before{
+  content:"🎉 " !important;
+  font-size:22px !important;
+}
+
+/* Error message styling */
+#osf03e5a14a .osf-err-msg{
+  color:#c0392b !important;
+  font-size:11px !important;
+  font-weight:500 !important;
+  margin-top:4px !important;
+  padding:4px 12px !important;
+  background:rgba(192,57,43,.06) !important;
+  border-radius:8px !important;
+  border-left:3px solid #c0392b !important;
+}
+
+/* Loading state */
+#osf03e5a14a .osf-loading{
+  padding:40px 20px !important;
+  text-align:center !important;
+  color:#9b8976 !important;
+  font-size:13px !important;
+  font-weight:500 !important;
+}
+
+#osf03e5a14a .osf-loading:before{
+  content:"🪔 " !important;
+  font-size:20px !important;
+  display:block !important;
+  margin-bottom:10px !important;
+}
+
+/* Form groups spacing */
+#osf03e5a14a .osf-group{
+  gap:6px !important;
+  margin-bottom:4px !important;
+}
+
+/* Name field grid */
+#osf03e5a14a .osf-name-wrap{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:12px !important;
+}
+
+/* Help text */
+#osf03e5a14a .osf-help{
+  color:#a18d7b !important;
+  font-size:10px !important;
+  font-weight:400 !important;
+  padding-left:2px !important;
+}
+
+/* Required star */
+#osf03e5a14a .osf-req{
+  color:#f47b20 !important;
+  margin-left:3px !important;
+  font-weight:800 !important;
+}
+
+/* Divider */
+#osf03e5a14a .osf-divider{
+  border:0 !important;
+  border-top:2px dashed #eee3d7 !important;
+  margin:8px 0 12px !important;
+}
+
+/* Heading inside form */
+#osf03e5a14a .osf-heading{
+  color:#543621 !important;
+  font-family:'Noto Sans Devanagari',sans-serif !important;
+  margin:10px 0 6px !important;
+  font-size:20px !important;
+  font-weight:700 !important;
+  letter-spacing:.5px !important;
+}
+
+/* Paragraph inside form */
+#osf03e5a14a .osf-para{
+  color:#806d5c !important;
+  font-size:12.5px !important;
+  line-height:1.8 !important;
+  margin:0 0 6px !important;
+  font-weight:400 !important;
+}
+
+/* Terms styling */
+#osf03e5a14a .osf-terms-wrap{
+  display:flex !important;
+  align-items:flex-start !important;
+  gap:10px !important;
+  color:#5a4537 !important;
+  font-size:11.5px !important;
+  line-height:1.6 !important;
+  padding:10px 12px !important;
+  background:rgba(255,255,255,.6) !important;
+  border-radius:12px !important;
+  border:1px solid rgba(214,164,59,.15) !important;
+}
+
+#osf03e5a14a .osf-terms-wrap input[type="checkbox"]{
+  accent-color:#f47b20 !important;
+  width:16px !important;
+  height:16px !important;
+  margin-top:1px !important;
+  flex-shrink:0 !important;
+}
+
+/* Toggle switch */
+#osf03e5a14a .osf-toggle-wrap{
+  display:flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  padding:6px 0 !important;
+}
+
+#osf03e5a14a .osf-toggle-slider{
+  background:#d8e3f0 !important;
+  box-shadow:inset 0 2px 4px rgba(0,0,0,.06) !important;
+}
+
+#osf03e5a14a .osf-toggle-inp:checked + .osf-toggle-slider{
+  background:#f47b20 !important;
+  box-shadow:0 0 0 3px rgba(244,123,32,.2) !important;
+}
+
+/* Tags styling */
+#osf03e5a14a .osf-tags-wrap{
+  border:1.5px solid #eaded0 !important;
+  border-radius:14px !important;
+  background:#ffffff !important;
+  padding:8px 10px !important;
+  min-height:44px !important;
+  transition:all .3s ease !important;
+}
+
+#osf03e5a14a .osf-tags-wrap:focus-within{
+  border-color:#f47b20 !important;
+  box-shadow:0 0 0 4px rgba(244,123,32,.08) !important;
+}
+
+#osf03e5a14a .osf-tag{
+  background:linear-gradient(135deg,#fff0d7,#ffe8d0) !important;
+  border:1px solid #fcd49a !important;
+  border-radius:20px !important;
+  color:#a85b19 !important;
+  padding:3px 10px !important;
+  font-size:11px !important;
+  font-weight:600 !important;
+}
+
+#osf03e5a14a .osf-tag-del{
+  color:#c0392b !important;
+  font-size:12px !important;
+}
+
+/* Star rating */
+#osf03e5a14a .osf-star{
+  font-size:28px !important;
+  transition:all .2s ease !important;
+  color:#d8e3f0 !important;
+}
+
+#osf03e5a14a .osf-star.on{
+  color:#f47b20 !important;
+  transform:scale(1.05) !important;
+}
+
+#osf03e5a14a .osf-star:hover{
+  transform:scale(1.15) !important;
+}
+
+/* Range slider */
+#osf03e5a14a .osf-range-inp{
+  accent-color:#f47b20 !important;
+  height:6px !important;
+  border-radius:6px !important;
+  background:linear-gradient(to right,#eaded0,#f47b20) !important;
+}
+
+#osf03e5a14a .osf-range-val{
+  color:#543621 !important;
+  font-weight:800 !important;
+  font-size:14px !important;
+  min-width:36px !important;
+}
+
+/* Quantity controls */
+#osf03e5a14a .osf-qty-btn{
+  width:38px !important;
+  height:38px !important;
+  border:1.5px solid #eaded0 !important;
+  background:#fffdfa !important;
+  border-radius:12px !important;
+  font-size:16px !important;
+  cursor:pointer !important;
+  font-weight:700 !important;
+  color:#543621 !important;
+  transition:all .25s ease !important;
+}
+
+#osf03e5a14a .osf-qty-btn:hover{
+  background:#fff0d7 !important;
+  border-color:#f47b20 !important;
+  color:#f47b20 !important;
+}
+
+#osf03e5a14a .osf-qty-inp{
+  width:64px !important;
+  text-align:center !important;
+  border:1.5px solid #eaded0 !important;
+  border-radius:12px !important;
+  padding:8px !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  color:#543621 !important;
+}
+
+/* Currency input */
+#osf03e5a14a .osf-cur-wrap{
+  position:relative !important;
+}
+
+#osf03e5a14a .osf-cur-sym{
+  position:absolute !important;
+  left:14px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  font-weight:800 !important;
+  color:#f47b20 !important;
+  font-size:14px !important;
+  pointer-events:none !important;
+}
+
+#osf03e5a14a .osf-cur-inp{
+  padding-left:34px !important;
+}
+
+/* File upload */
+#osf03e5a14a input[type="file"].osf-input{
+  padding:12px !important;
+  background:#fffdfa !important;
+  border-style:dashed !important;
+  border-color:#d6a43b !important;
+  cursor:pointer !important;
+}
+
+#osf03e5a14a input[type="file"].osf-input:hover{
+  background:#fff8ef !important;
+  border-color:#f47b20 !important;
+}
+
+/* Reference number in success */
+#osf03e5a14a .osf-ref-note{
+  margin:.65rem 0 0 !important;
+  font-size:.9rem !important;
+  color:#543621 !important;
+  background:rgba(244,123,32,.06) !important;
+  padding:8px 16px !important;
+  border-radius:10px !important;
+  display:inline-block !important;
+}
+
+#osf03e5a14a .osf-ref-note strong{
+  font-family:ui-monospace,monospace !important;
+  letter-spacing:.05em !important;
+  color:#f47b20 !important;
+}
+
+
+/* ============================================================
+   CONTACT BOTTOM MESSAGE
+============================================================ */
+
+.bs4-contact-note{
+
+  position:relative;
+
+  z-index:3;
+
+  text-align:center;
+
+  margin-top:28px;
+
+  color:rgba(255,255,255,.76);
+
+  font-size:10px;
+}
+
+
+.bs4-contact-note span{
+
+  color:#fff3a8;
+
+  font-weight:700;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media(max-width:1000px){
+
+  .bs4-hero-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+  .bs4-hero-desc{
+
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .bs4-buttons{
+
+    justify-content:center;
+  }
+
+  .bs4-hero-art{
+
+    min-height:400px;
+  }
+
+
+  .bs4-service-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+
+  .bs4-why-grid{
+
+    grid-template-columns:1fr;
+  }
+
+
+  .bs4-contact-grid{
+
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media(max-width:650px){
+
+  .bs4-container{
+
+    width:
+      calc(100% - 26px);
+  }
+
+
+  .bs4-hero{
+
+    min-height:auto;
+  }
+
+
+  .bs4-hero-grid{
+
+    padding:65px 0 90px;
+
+    gap:20px;
+  }
+
+
+  .bs4-hero h1{
+
+    font-size:39px;
+  }
+
+
+  .bs4-hero-desc{
+
+    font-size:13px;
+  }
+
+
+  .bs4-art-ring{
+
+    width:300px;
+    height:300px;
+  }
+
+
+  .bs4-art-card{
+
+    width:260px;
+
+    min-height:320px;
+  }
+
+
+  .bs4-services,
+  .bs4-why,
+  .bs4-contact{
+
+    padding:65px 0;
+  }
+
+
+  .bs4-service-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:11px;
+  }
+
+
+  .bs4-service{
+
+    padding:19px 14px;
+  }
+
+
+  .bs4-service-icon{
+
+    width:50px;
+    height:50px;
+
+    font-size:24px;
+  }
+
+
+  .bs4-service h3{
+
+    font-size:13px;
+  }
+
+
+  .bs4-service p{
+
+    font-size:10px;
+  }
+
+
+  .bs4-benefits{
+
+    grid-template-columns:1fr;
+  }
+
+
+  .bs4-how-card{
+
+    padding:24px;
+  }
+
+
+  .bs4-contact-info{
+
+    padding:23px;
+  }
+
+
+  .bs4-book-card{
+
+    padding:20px;
+  }
+
+
+  #osf03e5a14a .osf-name-wrap{
+
+    grid-template-columns:1fr !important;
+  }
+
+  #osf03e5a14a .osf-form{
+    padding:18px 14px !important;
+  }
+
+
+  .bs4-contact-buttons{
+
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+
+@media(max-width:420px){
+
+  .bs4-service-grid{
+
+    grid-template-columns:1fr;
+  }
+
+
+  .bs4-buttons{
+
+    flex-direction:column;
+  }
+
+
+  .bs4-btn{
+
+    width:100%;
+  }
+
+
+  .bs4-contact-buttons{
+
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+</style>
+
+
+<!-- ============================================================
+     PAGE START
+============================================================ -->
+
+<div id="bs-pandit-4">
+
+
+<!-- ============================================================
+     SECTION 1
+     WELCOME / HERO
+============================================================ -->
+
+<section class="bs4-hero" id="bs4-home">
+
+  <div class="bs4-particle bs4-p1">✦</div>
+  <div class="bs4-particle bs4-p2">✧</div>
+  <div class="bs4-particle bs4-p3">🪔</div>
+  <div class="bs4-particle bs4-p4">✦</div>
+
+
+  <div class="bs4-container">
+
+    <div class="bs4-hero-grid">
+
+
+      <!-- LEFT -->
+
+      <div>
+
+        <div class="bs4-badge">
+
+          <i></i>
+
+          श्रद्धा • संस्कार • सेवा
+
+        </div>
+
+
+        <h1>
+
+          आपल्या शुभ कार्यासाठी
+
+          <span>
+            सिद्ध पंडित जी
+          </span>
+
+        </h1>
+
+
+        <p class="bs4-hero-desc">
+
+          गृहप्रवेश, सत्यनारायण पूजा, रुद्राभिषेक,
+          हवन, गणेश पूजा आणि विविध धार्मिक विधींसाठी
+          अनुभवी पंडितजी आपल्या घरी बुक करा.
+
+        </p>
+
+
+        <div class="bs4-buttons">
+
+          <a
+            href="#bs4-contact"
+            class="bs4-btn bs4-btn-orange"
+          >
+            🪔 Book Pandit Ji
+          </a>
+
+
+          <a
+            href="#bs4-services"
+            class="bs4-btn bs4-btn-white"
+          >
+            Explore Pujas →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT VISUAL -->
+
+      <div class="bs4-hero-art">
+
+        <div class="bs4-art-ring"></div>
+
+
+        <div class="bs4-art-card">
+
+
+          <div class="bs4-diya">
+
+            <div class="bs4-flame"></div>
+
+            <div class="bs4-bowl"></div>
+
+          </div>
+
+
+          <h3>
+            पंडित जी आपल्या द्वारी
+          </h3>
+
+
+          <p>
+            तुमच्या शुभ कार्यासाठी
+            योग्य पूजा आणि अनुभवी
+            पंडितजींची सेवा.
+          </p>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     SECTION 2
+     PUJA SERVICES
+============================================================ -->
+
+<section
+  class="bs4-services"
+  id="bs4-services"
+>
+
+
+  <div class="bs4-container">
+
+
+    <div class="bs4-heading">
+
+      <small>
+        OUR PUJA SERVICES
+      </small>
+
+
+      <h2>
+
+        प्रत्येक शुभ कार्यासाठी
+
+        <span>
+          योग्य पूजा
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        तुमच्या धार्मिक प्रसंगासाठी
+        अनुभवी पंडितजी आणि योग्य पूजा सेवा.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="bs4-service-grid">
+
+
+      <!-- 1 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🏠
+        </div>
+
+        <h3>
+          गृहप्रवेश पूजा
+        </h3>
+
+        <p>
+          नवीन घरासाठी सुख, शांती
+          आणि समृद्धीसाठी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 2 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🔱
+        </div>
+
+        <h3>
+          रुद्राभिषेक
+        </h3>
+
+        <p>
+          भगवान शिवाची विशेष
+          श्रद्धापूर्वक पूजा.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 3 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🕉️
+        </div>
+
+        <h3>
+          सत्यनारायण पूजा
+        </h3>
+
+        <p>
+          कुटुंबाच्या सुख-समृद्धीसाठी
+          पवित्र पूजा.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 4 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🔥
+        </div>
+
+        <h3>
+          हवन / यज्ञ
+        </h3>
+
+        <p>
+          शुद्धीकरण, शांती आणि
+          सकारात्मकतेसाठी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 5 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🌺
+        </div>
+
+        <h3>
+          गणेश पूजा
+        </h3>
+
+        <p>
+          विघ्नहर्ता श्री गणेशाची
+          मंगल पूजा.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 6 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🪷
+        </div>
+
+        <h3>
+          लक्ष्मी पूजा
+        </h3>
+
+        <p>
+          धन, समृद्धी आणि
+          सौभाग्यासाठी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 7 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          👶
+        </div>
+
+        <h3>
+          नामकरण पूजा
+        </h3>
+
+        <p>
+          बाळाच्या शुभ नामकरणासाठी
+          धार्मिक विधी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+      <!-- 8 -->
+
+      <div class="bs4-service">
+
+        <div class="bs4-service-icon">
+          🙏
+        </div>
+
+        <h3>
+          शांती पूजा
+        </h3>
+
+        <p>
+          घरातील शांती आणि
+          सकारात्मकतेसाठी.
+        </p>
+
+        <a href="#bs4-contact">
+          Book Now →
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     SECTION 3
+     WHY BHAKT SEVA + HOW IT WORKS
+============================================================ -->
+
+<section class="bs4-why" id="bs4-why">
+
+
+  <div class="bs4-container">
+
+
+    <div class="bs4-why-grid">
+
+
+      <!-- LEFT -->
+
+      <div>
+
+
+        <div class="bs4-heading"
+             style="text-align:left;margin:0 0 25px">
+
+          <small>
+            WHY BHAKT SEVA
+          </small>
+
+        </div>
+
+
+        <h2 class="bs4-why-title">
+
+          तुमच्या श्रद्धेचा
+
+          <span>
+            विश्वासाचा साथीदार
+          </span>
+
+        </h2>
+
+
+        <p class="bs4-why-text">
+
+          तुमच्या शुभ कार्यासाठी योग्य पंडितजी
+          शोधणे आणि पूजा बुक करणे आम्ही सोपे
+          आणि विश्वासार्ह बनवतो.
+
+        </p>
+
+
+        <div class="bs4-benefits">
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Verified Pandit Ji
+              </strong>
+
+              <span>
+                अनुभवी आणि सत्यापित पंडितजी
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              🏠
+            </div>
+
+            <div>
+
+              <strong>
+                Home Service
+              </strong>
+
+              <span>
+                तुमच्या सोयीच्या ठिकाणी सेवा
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              ⏰
+            </div>
+
+            <div>
+
+              <strong>
+                Flexible Timing
+              </strong>
+
+              <span>
+                तुमच्या सोयीची तारीख व वेळ
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              🪔
+            </div>
+
+            <div>
+
+              <strong>
+                Puja Guidance
+              </strong>
+
+              <span>
+                पूजा सामग्रीसाठी मार्गदर्शन
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              📱
+            </div>
+
+            <div>
+
+              <strong>
+                Easy Booking
+              </strong>
+
+              <span>
+                सोपी ऑनलाइन booking प्रक्रिया
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="bs4-benefit">
+
+            <div class="bs4-benefit-icon">
+              🙏
+            </div>
+
+            <div>
+
+              <strong>
+                Trusted Service
+              </strong>
+
+              <span>
+                श्रद्धेने आणि काळजीपूर्वक सेवा
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT -->
+
+      <div class="bs4-how-card">
+
+
+        <h3>
+          🪔 पंडितजी बुक करणे सोपे आहे
+        </h3>
+
+
+        <!-- STEP 1 -->
+
+        <div class="bs4-step">
+
+          <div class="bs4-step-num">
+            1
+          </div>
+
+          <div>
+
+            <h4>
+              पूजा निवडा
+            </h4>
+
+            <p>
+              तुमच्या शुभ कार्यासाठी
+              आवश्यक पूजा निवडा.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="bs4-step">
+
+          <div class="bs4-step-num">
+            2
+          </div>
+
+          <div>
+
+            <h4>
+              तारीख व वेळ द्या
+            </h4>
+
+            <p>
+              तुमची preferred date आणि
+              वेळ booking form मध्ये भरा.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div class="bs4-step">
+
+          <div class="bs4-step-num">
+            3
+          </div>
+
+          <div>
+
+            <h4>
+              तपशील भरा
+            </h4>
+
+            <p>
+              तुमचे नाव, location आणि
+              आवश्यक माहिती द्या.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 4 -->
+
+        <div class="bs4-step">
+
+          <div class="bs4-step-num">
+            4
+          </div>
+
+          <div>
+
+            <h4>
+              Booking Confirm करा
+            </h4>
+
+            <p>
+              तुमची booking request submit
+              करा आणि आमच्या टीमशी संपर्क साधा.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     SECTION 4
+     CONTACT + BOOKING
+============================================================ -->
+
+<section
+  class="bs4-contact"
+  id="bs4-contact"
+>
+
+
+  <div class="bs4-container">
+
+
+    <div class="bs4-contact-heading">
+
+      <small>
+        CONTACT & BOOKING
+      </small>
+
+
+      <h2>
+
+        आपल्या शुभ कार्यासाठी
+
+        <span>
+          पंडितजी आजच बुक करा
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        तुमची पूजा, तारीख आणि आवश्यक माहिती
+        भरा. Bhakt Seva टीम तुमच्या booking
+        request वर पुढील प्रक्रिया करेल.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="bs4-contact-grid">
+
+
+      <!-- ==========================================
+           CONTACT INFORMATION
+      ========================================== -->
+
+      <div class="bs4-contact-info">
+
+
+        <h3>
+          🙏 आमच्याशी संपर्क करा
+        </h3>
+
+
+        <p>
+
+          पूजा किंवा पंडितजी booking संदर्भात
+          काही प्रश्न असल्यास आम्हाला संपर्क करा.
+
+        </p>
+
+
+        <!-- PHONE -->
+
+        <a
+          href="tel:+91 99216 26458"
+          class="bs4-contact-item"
+        >
+
+          <div class="bs4-contact-icon">
+            📞
+          </div>
+
+          <div>
+
+            <strong>
+              Call Us
+            </strong>
+
+            <span>
+              +91 91 99216 26458
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+          href="https://wa.me/919921626458"
+          target="_blank"
+          rel="noopener"
+          class="bs4-contact-item"
+        >
+
+          <div class="bs4-contact-icon">
+            💬
+          </div>
+
+          <div>
+
+            <strong>
+              WhatsApp
+            </strong>
+
+            <span>
+              Chat with Bhakt Seva
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- LOCATION -->
+
+        <div class="bs4-contact-item">
+
+          <div class="bs4-contact-icon">
+            📍
+          </div>
+
+          <div>
+
+            <strong>
+              Service
+            </strong>
+
+            <span>
+              Available as per service location
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="bs4-contact-item">
+
+          <div class="bs4-contact-icon">
+            🕐
+          </div>
+
+          <div>
+
+            <strong>
+              Booking Support
+            </strong>
+
+            <span>
+              Contact our team for assistance
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="bs4-contact-buttons">
+
+
+          <a
+            href="tel:+91 9921626458"
+            class="bs4-contact-btn"
+          >
+            📞 Call Now
+          </a>
+
+
+          <a
+            href="https://wa.me/919921626458"
+            target="_blank"
+            rel="noopener"
+            class="bs4-contact-btn"
+          >
+            💬 WhatsApp
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- ==========================================
+           BOOKING FORM — ORGSCALE WIDGET
+      ========================================== -->
+
+      <div class="bs4-book-card">
+
+
+        <div class="bs4-book-card-head">
+
+          <h3>
+            🪔 Book a Pandit Ji
+          </h3>
+
+          <p>
+            तुमचा तपशील भरा — आमची टीम लवकरच संपर्क करेल.
+          </p>
+
+        </div>
+
+
+        <!-- ORGscale Form Widget -->
+        <!-- API: https://api2.orgscale.in | UUID: 03e5a14a-79ca-4e5d-9864-5dd5db9be505 -->
+        <div id="osf03e5a14a"></div>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="bs4-contact-note">
+
+      <span>🪔 श्रद्धा • संस्कार • सेवा</span>
+
+      &nbsp; | &nbsp;
+
+      Bhakt Seva — Your Trusted Puja Service
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
+
+/* ============================================================
+   ORGSCALE FORM WIDGET
+   UUID: 03e5a14a-79ca-4e5d-9864-5dd5db9be505
+============================================================ */
+
+(function(){
+  var _ROOT=document.getElementById("osf03e5a14a");
+  var _CFG={uuid:"03e5a14a-79ca-4e5d-9864-5dd5db9be505",api:"https://api2.orgscale.in"};
+  var _formStarted=Math.floor(Date.now()/1000);
+  var _tags={};var _ratings={};var _schema=null;
+  function _h(){return {};}
+  function _esc(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+  _ROOT.innerHTML='<div class="osf-loading">🪔 Booking form loading...</div>';
+  fetch(_CFG.api+"/api/public/forms/"+_CFG.uuid+"/",{headers:_h()})
+    .then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
+    .then(function(s){_schema=s;_render(s);})
+    .catch(function(){_ROOT.innerHTML='<p style="color:#c0392b;padding:1rem">This form is currently unavailable. Please try again later.</p>';});
+  function _render(s){
+    var html='<form class="osf-form" id="osf-form-osf03e5a14a" novalidate>';
+    var step=0;var hasSteps=s.fields_data.some(function(f){return f.field_type==="next_step";});
+    if(hasSteps){html+='<div class="osf-step active" data-step="0">';step=0;}
+    s.fields_data.forEach(function(f){
+      if(f.field_type==="next_step"){
+        if(hasSteps)html+='</div>';
+        step++;
+        html+='<div style="margin:0">';
+        html+='<button type="button" class="osf-btn osf-btn-next" data-next-step>'+_esc(f.label||"Next")+'</button>';
+        html+='</div>';
+        if(hasSteps)html+='<div class="osf-step" data-step="'+step+'">';
+        return;
+      }
+      html+=_renderField(f);
+    });
+    if(hasSteps)html+='</div>';
+    html+='</form>';
+    _ROOT.innerHTML=html;
+    _wireForm(s);
+  }
+  function _renderField(f){
+    var id="osf_"+f.field_key;var cfg=f.config||{};var opts=f.options||[];
+    var cond=f.conditional_logic&&f.conditional_logic.show_field_key?'data-cond-key="'+_esc(f.field_key)+'"':"";
+    var wrap='<div class="osf-group" id="osf-g-'+_esc(f.field_key)+'" '+cond+'>';
+    var lbl=f.required?'<label class="osf-label" for="'+id+'">'+_esc(f.label)+'<span class="osf-req">*</span></label>':(f.label?'<label class="osf-label" for="'+id+'">'+_esc(f.label)+'</label>':"");
+    var help=f.help_text?'<div class="osf-help">'+_esc(f.help_text)+'</div>':"";
+    var t=f.field_type;
+    if(t==="divider")return'<hr class="osf-divider">';
+    if(t==="spacer")return'<div style="height:'+((cfg.height||20))+"px"+'"></div>';
+    if(t==="heading"){var lvl=cfg.level||"h2";return'<'+lvl+' class="osf-heading">'+_esc(f.label)+'</'+lvl+'>'; }
+    if(t==="paragraph")return'<p class="osf-para">'+_esc(f.label)+'</p>';
+    if(t==="conditional")return"";
+    if(t==="hidden")return'<input type="hidden" id="'+id+'" name="'+_esc(f.field_key)+'" value="'+_esc(cfg.default_value||"")+'" />';
+    var inner="";
+    var req=f.required?"required":"";
+    if(t==="text"||t==="phone"||t==="url"||t==="password"||t==="number"||t==="email"){
+      var itype=t==="phone"?"tel":t==="text"?"text":t;
+      inner='<input type="'+itype+'" class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" placeholder="'+_esc(f.placeholder||"")+'" '+req+' />';
+    } else if(t==="textarea"){
+      inner='<textarea class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" placeholder="'+_esc(f.placeholder||"")+'" '+req+'></textarea>';
+    } else if(t==="currency"){
+      var sym=cfg.symbol||"₹";
+      inner='<div class="osf-cur-wrap"><span class="osf-cur-sym">'+_esc(sym)+'</span><input type="number" class="osf-input osf-cur-inp" id="'+id+'" name="'+_esc(f.field_key)+'" placeholder="0.00" min="0" step="0.01" '+req+' /></div>';
+    } else if(t==="date"){
+      inner='<input type="date" class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" '+req+' />';
+    } else if(t==="time"){
+      inner='<input type="time" class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" '+req+' />';
+    } else if(t==="datetime"){
+      inner='<input type="datetime-local" class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" '+req+' />';
+    } else if(t==="month"){
+      inner='<input type="month" class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" '+req+' />';
+    } else if(t==="color"){
+      inner='<input type="color" class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" style="height:42px;cursor:pointer" />';
+    } else if(t==="file"||t==="image"||t==="multifile"){
+      var acc=t==="image"?"accept=\"image/*\"":"";var mul=t==="multifile"?"multiple":"";
+      inner='<input type="file" class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" '+acc+" "+mul+" "+req+' />';
+    } else if(t==="dropdown"){
+      var selOpts='<option value="">'+(f.placeholder||"Select…")+'</option>';
+      opts.forEach(function(o){var lbl=typeof o==="object"?o.label:o;var val=typeof o==="object"?o.value:o;selOpts+='<option value="'+_esc(val)+'">'+_esc(lbl)+"</option>";});
+      inner='<select class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" '+req+'>'+selOpts+"</select>";
+    } else if(t==="multiselect"){
+      var msOpts="";opts.forEach(function(o){var lbl=typeof o==="object"?o.label:o;var val=typeof o==="object"?o.value:o;msOpts+='<option value="'+_esc(val)+'">'+_esc(lbl)+"</option>";});
+      inner='<select class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" multiple size="4" '+req+'>'+msOpts+"</select>";
+    } else if(t==="radio"){
+      inner='<div class="osf-radio-group" id="'+id+'">';
+      opts.forEach(function(o,i){var lbl=typeof o==="object"?o.label:o;var val=typeof o==="object"?o.value:o;inner+='<label class="osf-radio-opt"><input type="radio" name="'+_esc(f.field_key)+'" value="'+_esc(val)+'" '+req+' />'+_esc(lbl)+"</label>";});
+      inner+="</div>";
+    } else if(t==="checkbox"){
+      inner='<div class="osf-check-group" id="'+id+'">';
+      opts.forEach(function(o){var lbl=typeof o==="object"?o.label:o;var val=typeof o==="object"?o.value:o;inner+='<label class="osf-check-opt"><input type="checkbox" name="'+_esc(f.field_key)+'" value="'+_esc(val)+'" />'+_esc(lbl)+"</label>";});
+      inner+="</div>";
+    } else if(t==="toggle"){
+      inner='<div class="osf-toggle-wrap"><input type="checkbox" class="osf-toggle-inp" id="'+id+'" name="'+_esc(f.field_key)+'" /><label class="osf-toggle-slider" for="'+id+'"></label><span style="font-size:.88rem;color:#555">'+_esc(f.placeholder||"")+'</span></div>';
+    } else if(t==="terms"){
+      var tUrl=cfg.terms_url?'<a href="'+_esc(cfg.terms_url)+'" target="_blank" rel="noopener" style="color:#F47C20"> (View Terms)</a>':"";
+      inner='<div class="osf-terms-wrap"><input type="checkbox" id="'+id+'" name="'+_esc(f.field_key)+'" value="accepted" '+req+' /><label for="'+id+'">'+_esc(f.label)+tUrl+"</label></div>";
+      lbl="";
+    } else if(t==="rating"){
+      var maxS=cfg.max_stars||5;
+      inner='<div class="osf-rating-wrap" id="'+id+'" data-rating="0">';
+      for(var si=1;si<=maxS;si++)inner+='<span class="osf-star" data-val="'+si+'">★</span>';
+      inner+='<input type="hidden" name="'+_esc(f.field_key)+'" id="'+id+'-val" value="" />';
+      inner+="</div>";
+    } else if(t==="tags"){
+      inner='<div class="osf-tags-wrap" id="'+id+'-wrap"><input type="text" class="osf-tags-inp" id="'+id+'" placeholder="'+_esc(f.placeholder||"Type and press Enter")+'" /></div>';
+      inner+='<input type="hidden" name="'+_esc(f.field_key)+'" id="'+id+'-val" />';
+    } else if(t==="range"){
+      var mn=cfg.min!=null?cfg.min:0;var mx=cfg.max!=null?cfg.max:100;var st=cfg.step||1;
+      inner='<div class="osf-range-wrap"><input type="range" class="osf-range-inp" id="'+id+'" name="'+_esc(f.field_key)+'" min="'+mn+'" max="'+mx+'" step="'+st+'" value="'+mn+'" /><span class="osf-range-val" id="'+id+'-val">'+mn+"</span></div>";
+    } else if(t==="quantity"){
+      var qdf=cfg.default_value||1;var qmn=cfg.min||1;var qmx=cfg.max||9999;
+      inner='<div class="osf-qty-wrap"><button type="button" class="osf-qty-btn" data-qty-dec="'+id+'">−</button><input type="number" class="osf-qty-inp" id="'+id+'" name="'+_esc(f.field_key)+'" value="'+qdf+'" min="'+qmn+'" max="'+qmx+'" /><button type="button" class="osf-qty-btn" data-qty-inc="'+id+'">+</button></div>';
+    } else if(t==="name"){
+      inner='<div class="osf-name-wrap"><input type="text" class="osf-input" name="'+_esc(f.field_key)+'_first" placeholder="First name" '+req+' /><input type="text" class="osf-input" name="'+_esc(f.field_key)+'_last" placeholder="Last name" /></div>';
+    } else if(t==="address"){
+      inner='<div class="osf-addr-wrap"><input type="text" class="osf-input" name="'+_esc(f.field_key)+'_street" placeholder="Street address" '+req+' /><input type="text" class="osf-input" name="'+_esc(f.field_key)+'_city" placeholder="City" /><div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem"><input type="text" class="osf-input" name="'+_esc(f.field_key)+'_state" placeholder="State" /><input type="text" class="osf-input" name="'+_esc(f.field_key)+'_zip" placeholder="ZIP / Postal code" /></div></div>';
+    } else if(t==="submit"){
+      return'<div class="osf-group"><button type="submit" class="osf-btn osf-btn-submit">'+_esc(f.label||"Submit")+'</button></div>';
+    } else if(t==="reset"){
+      return'<div class="osf-group"><button type="reset" class="osf-btn osf-btn-reset">'+_esc(f.label||"Reset")+'</button></div>';
+    } else {
+      inner='<input type="text" class="osf-input" id="'+id+'" name="'+_esc(f.field_key)+'" placeholder="'+_esc(f.placeholder||"")+'" />';
+    }
+    return wrap+lbl+inner+help+"</div>";
+  }
+  function _wireForm(s){
+    var form=document.getElementById("osf-form-osf03e5a14a");if(!form)return;
+    // Rating stars
+    form.querySelectorAll(".osf-rating-wrap").forEach(function(wrap){
+      var stars=wrap.querySelectorAll(".osf-star");var hiddenInp=wrap.querySelector('input[type="hidden"]');
+      function setRating(val){wrap.setAttribute("data-rating",val);hiddenInp&&(hiddenInp.value=val);
+        stars.forEach(function(s,i){s.classList.toggle("on",i<val);});}
+      stars.forEach(function(s,i){
+        s.addEventListener("click",function(){setRating(i+1);});
+        s.addEventListener("mouseenter",function(){stars.forEach(function(x,j){x.style.color=j<=i?"#F47C20":"";});});
+        s.addEventListener("mouseleave",function(){stars.forEach(function(x){x.style.color="";});});
+      });
+    });
+    // Tags
+    form.querySelectorAll("[id$='-wrap'].osf-tags-wrap").forEach(function(wrap){
+      var inp=wrap.querySelector(".osf-tags-inp");if(!inp)return;
+      var baseId=inp.id;var hiddenInp=document.getElementById(baseId+"-val");
+      var tags=[];
+      function renderTags(){
+        wrap.querySelectorAll(".osf-tag").forEach(function(t){t.remove();});
+        tags.forEach(function(tag,i){
+          var chip=document.createElement("span");chip.className="osf-tag";
+          chip.innerHTML=_esc(tag)+'<button type="button" class="osf-tag-del" data-ti="'+i+'">✕</button>';
+          chip.querySelector(".osf-tag-del").addEventListener("click",function(){tags.splice(i,1);renderTags();if(hiddenInp)hiddenInp.value=JSON.stringify(tags);});
+          wrap.insertBefore(chip,inp);
+        });
+        if(hiddenInp)hiddenInp.value=JSON.stringify(tags);
+      }
+      inp.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===",")&&inp.value.trim()){e.preventDefault();tags.push(inp.value.trim());inp.value="";renderTags();}});
+    });
+    // Range
+    form.querySelectorAll(".osf-range-inp").forEach(function(inp){
+      var valEl=document.getElementById(inp.id+"-val");
+      inp.addEventListener("input",function(){if(valEl)valEl.textContent=inp.value;});
+    });
+    // Quantity
+    form.querySelectorAll("[data-qty-dec]").forEach(function(btn){
+      var id=btn.getAttribute("data-qty-dec");var inp=document.getElementById(id);if(!inp)return;
+      btn.addEventListener("click",function(){var v=parseInt(inp.value,10)||1;var mn=parseInt(inp.min,10)||1;if(v>mn)inp.value=v-1;});
+    });
+    form.querySelectorAll("[data-qty-inc]").forEach(function(btn){
+      var id=btn.getAttribute("data-qty-inc");var inp=document.getElementById(id);if(!inp)return;
+      btn.addEventListener("click",function(){var v=parseInt(inp.value,10)||1;var mx=parseInt(inp.max,10)||9999;if(v<mx)inp.value=v+1;});
+    });
+    // Next step
+    form.querySelectorAll("[data-next-step]").forEach(function(btn){
+      btn.addEventListener("click",function(){
+        var steps=form.querySelectorAll(".osf-step");
+        var cur=-1;steps.forEach(function(s,i){if(s.classList.contains("active"))cur=i;});
+        if(cur>=0&&cur<steps.length-1){steps[cur].classList.remove("active");steps[cur+1].classList.add("active");}
+        btn.style.display="none";
+      });
+    });
+    // Conditional logic
+    s.fields_data.forEach(function(cf){
+      if(cf.field_type!=="conditional"||!cf.conditional_logic)return;
+      var cl=cf.conditional_logic;if(!cl.target_field_key||!cl.show_field_key)return;
+      var showGrp=document.getElementById("osf-g-"+cl.show_field_key);
+      if(!showGrp)return;
+      var targetInps=[].slice.call(form.querySelectorAll("[name='"+cl.target_field_key+"']"));
+      if(!targetInps.length)return;
+      var initHide=cl.action==="show";
+      if(initHide)showGrp.style.display="none";
+      function evalCond(){
+        var v="";
+        var firstInp=targetInps[0];
+        if(firstInp.type==="radio"){
+          var chk=form.querySelector("[name='"+cl.target_field_key+"']:checked");
+          v=chk?chk.value:"";
+        } else if(firstInp.type==="checkbox"){
+          v=firstInp.checked?firstInp.value:"";
+        } else {
+          v=firstInp.value;
+        }
+        var vl=v.trim().toLowerCase();
+        var cl_val=(cl.value||"").trim().toLowerCase();
+        var match=false;
+        if(cl.operator==="equals")match=vl===cl_val;
+        else if(cl.operator==="not_equals")match=vl!==cl_val;
+        else if(cl.operator==="contains")match=vl.indexOf(cl_val)>=0;
+        else if(cl.operator==="not_empty")match=v.trim().length>0;
+        showGrp.style.display=(cl.action==="show"?match:!match)?"":"none";
+      }
+      targetInps.forEach(function(inp){
+        inp.addEventListener("change",evalCond);
+        inp.addEventListener("input",evalCond);
+      });
+    });
+    // Submit
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      var subBtn=form.querySelector(".osf-btn-submit");if(subBtn)subBtn.disabled=true;
+      var data={};var fileJobs=[];
+      s.fields_data.forEach(function(f){
+        var t=f.field_type;
+        if(["divider","spacer","heading","paragraph","conditional","submit","reset","next_step"].indexOf(t)>=0)return;
+        if(t==="hidden"){var hi=document.getElementById("osf_"+f.field_key);if(hi)data[f.field_key]=hi.value;}
+        else if(t==="rating"){var ri=document.getElementById("osf_"+f.field_key+"-val");if(ri)data[f.field_key]=ri.value;}
+        else if(t==="tags"){var ti=document.getElementById("osf_"+f.field_key+"-val");if(ti)try{data[f.field_key]=JSON.parse(ti.value||"[]");}catch(e){data[f.field_key]=[];}}
+        else if(t==="radio"){var rb=form.querySelector("[name='"+f.field_key+"']:checked");data[f.field_key]=rb?rb.value:"";}
+        else if(t==="checkbox"){var cbs=form.querySelectorAll("[name='"+f.field_key+"']:checked");data[f.field_key]=[].map.call(cbs,function(c){return c.value;});}
+        else if(t==="multiselect"){var ms=document.getElementById("osf_"+f.field_key);if(ms){data[f.field_key]=[].filter.call(ms.options,function(o){return o.selected;}).map(function(o){return o.value;});}}
+        else if(t==="toggle"){var tg=document.getElementById("osf_"+f.field_key);if(tg)data[f.field_key]=tg.checked;}
+        else if(t==="file"||t==="image"||t==="multifile"){
+          var fi=document.getElementById("osf_"+f.field_key);if(!fi||!fi.files.length)return;
+          var _fkey=f.field_key;var _single=fi.files.length===1;
+          var _MAXUP=8388608;
+          var _MAXB64=4194304;
+          var _job=Promise.all([].map.call(fi.files,function(file){
+            return new Promise(function(resolve){
+              if(file.size>_MAXUP){resolve({name:file.name,url:null,size:file.size});return;}
+              var fd=new FormData();fd.append("file",file,file.name);
+              function tryReader(){
+                if(file.size>_MAXB64){resolve({name:file.name,url:null});return;}
+                var rd=new FileReader();
+                rd.onload=function(ev){resolve({name:file.name,url:ev.target.result});};
+                rd.onerror=function(){resolve({name:file.name,url:null});};
+                rd.readAsDataURL(file);
+              }
+              fetch(_CFG.api+"/api/public/forms/"+_CFG.uuid+"/upload/",{method:"POST",headers:_h(),body:fd})
+                .then(function(r){return r.json().then(function(d){return{ok:r.ok,data:d};});})
+                .then(function(out){
+                  if(out.ok&&out.data&&out.data.url)resolve({name:(out.data.name||file.name),url:out.data.url});
+                  else tryReader();
+                }).catch(function(){tryReader();});
+            });
+          })).then(function(res){data[_fkey]=_single?res[0]:res;});
+          fileJobs.push(_job);
+        }
+        else if(t==="name"){var fn=form.querySelector("[name='"+f.field_key+"_first']");var ln=form.querySelector("[name='"+f.field_key+"_last']");data[f.field_key]={first:fn?fn.value:"",last:ln?ln.value:""};}
+        else if(t==="address"){var adFields=["street","city","state","zip"];var aObj={};adFields.forEach(function(k){var el=form.querySelector("[name='"+f.field_key+"_"+k+"']");if(el)aObj[k]=el.value;});data[f.field_key]=aObj;}
+        else if(t==="terms"){var tc=document.getElementById("osf_"+f.field_key);if(tc)data[f.field_key]=tc.checked?"accepted":"";}
+        else{var el=document.getElementById("osf_"+f.field_key)||form.querySelector("[name='"+f.field_key+"']");if(el)data[f.field_key]=el.value;}
+      });
+      // Wait for all file reads then validate and submit
+      Promise.all(fileJobs).then(function(){
+        var valid=true;var firstErr=null;
+        s.fields_data.forEach(function(f){
+          if(!f.required)return;
+          var v=data[f.field_key];var empty=(v==null||v===""||v===false||(Array.isArray(v)&&!v.length));
+          if(empty){valid=false;var grp=document.getElementById("osf-g-"+f.field_key);
+            if(grp&&grp.style.display!=="none"){
+              var existErr=grp.querySelector(".osf-err-msg");if(!existErr){var em=document.createElement("div");em.className="osf-err-msg";em.textContent="This field is required.";grp.appendChild(em);}
+              var inp=grp.querySelector(".osf-input");if(inp)inp.classList.add("osf-err");
+              if(!firstErr)firstErr=grp;
+            }
+          } else {var grp2=document.getElementById("osf-g-"+f.field_key);if(grp2){var em2=grp2.querySelector(".osf-err-msg");if(em2)em2.remove();var inp2=grp2.querySelector(".osf-input");if(inp2)inp2.classList.remove("osf-err");}}
+        });
+        if(!valid){if(firstErr)firstErr.scrollIntoView({behavior:"smooth",block:"center"});if(subBtn)subBtn.disabled=false;return;}
+        fetch(_CFG.api+"/api/public/forms/"+_CFG.uuid+"/submit/",{method:"POST",headers:Object.assign({"Content-Type":"application/json"},_h()),body:JSON.stringify({data:data,_hp_website:"",_form_started_at:_formStarted})})
+          .then(function(r){return r.json().then(function(d){return{ok:r.ok,data:d};});})
+          .then(function(out){
+            if(out.ok){
+              var _d=out.data||{};var okMsg=_esc(_d.detail||s.success_message);var ref=_d.reference_number;
+              var refHtml=ref?('<p class="osf-ref-note">🪔 Reference: <strong>'+_esc(ref)+'</strong></p>'):"";
+              document.getElementById("osf03e5a14a").innerHTML='<div class="osf-success">🙏 '+okMsg+'</div>'+refHtml;
+            } else {
+              var em=document.createElement("div");em.className="osf-err-msg";em.style.marginTop=".5rem";em.textContent=(out.data&&out.data.detail)||"Submission failed. Please try again.";
+              form.appendChild(em);if(subBtn)subBtn.disabled=false;
+            }
+          })
+          .catch(function(){var em=document.createElement("div");em.className="osf-err-msg";em.style.marginTop=".5rem";em.textContent="Network error. Please try again.";form.appendChild(em);if(subBtn)subBtn.disabled=false;});
+      });
+    });
+  }
+})();
+
+
+/* ============================================================
+   SMOOTH SCROLL
+============================================================ */
+
+document.addEventListener(
+  "click",
+  function(e){
+
+    var link =
+      e.target.closest(
+        'a[href^="#"]'
+      );
+
+
+    if(!link) return;
+
+
+    var target =
+      document.querySelector(
+        link.getAttribute("href")
+      );
+
+
+    if(!target) return;
+
+
+    e.preventDefault();
+
+
+    target.scrollIntoView({
+
+      behavior:"smooth",
+
+      block:"start"
+
+    });
+
+  }
+);
+
+</script>
